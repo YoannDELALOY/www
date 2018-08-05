@@ -1,0 +1,3655 @@
+#acrocheService {
+    width: 60%;
+    margin-left: 20%;
+    text-align: justify;
+}
+
+
+
+#flecheHaut {
+    width: 5%;
+        margin-left: 80%;
+    margin-top: -3%;
+    
+}
+
+.onglets {
+    z-index: 100000;
+}
+
+nav {
+    z-index: 10000;
+}
+
+#navProjets {
+    z-index: 10000;
+}
+
+
+
+.servises {
+    font-size: 13px;
+    width: 70%;
+    padding-left: 50px;
+}
+
+
+
+
+/*//////////////////////// SUR TOUT LE DOCUMENT //////////////////*/
+
+/* Nous donnons une taille d'image de 100% à toutes les images */
+h2 {
+    letter-spacing: 2px;
+}
+
+
+
+#hrtitreservise {
+    background: gray;
+}
+
+
+
+
+
+
+
+#footerPara {
+    font-size: 12px;
+}
+
+#footerCopy {
+    font-size: 14px;
+    
+}
+
+
+
+.lienimg {
+    width: 20%;
+    margin: 10px;
+}
+
+
+img {
+    width: 100%;
+}
+
+/* Nous retirons les décorations de tous les liens. */
+
+a {
+    text-decoration: none;
+}
+
+/* Nous rentrons les paramètres du body c'est-à-dire tout ce qui est affiché. Nous lui donnons une largeur max de 100% et un overflow x en hidden pour lui permettre de cacher les parties du slide voulues que nous verrons plus bas. */
+
+/* Nous donnons des paramètres de marge au body. */
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* A cet endroit nous donnons à la totalité des balises la famille de police roboto et un border box. */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Nous espaçons ici les lettres des titres de taille h3. */
+
+h3 {
+    letter-spacing: 1px;
+}
+
+/* Nous donnons une taille de police de 16px et un espace de 1px entre chaque lettres des paragraphes. */
+
+p {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Cette fois-çi nous entrons dans les traits gris qui suive les titres, nos services et nos projets. Il englobe d'une certaine façon le point bleu qui se trouve au milieu.
+Nous commençons par lui donner une largeur de 200px puis une hauteur de 1px ce qui définit sa taille suite à cela nous ajouter une image de fond avec linear-gardien et 3 couleur ce qui nous permet d'obtenir  ce gris metal et nous finissons avec une marge basse de 30px pour positionner ce trait. */
+
+
+hr {
+    width: 200px;
+    border: 0;
+    height: 1px;
+    
+    background-image: linear-gradient(to right, rgba(217, 217, 217, 0), rgba(217, 217, 217, 1), rgba(217, 217, 217, 0));
+    margin-bottom: 30px;
+}
+
+/* Mise en place bulle bleue au centre de la ligne séparatrice. */
+
+hr::after {
+    content: '•';
+    color: rgb(36, 174, 181);
+    font-size: 50px;
+    padding: 0px 5px;
+    margin: 0;
+    position: relative;
+    top: -28px;
+}
+
+/* Nous poursuivons la construction du point bleu. */
+
+.serv::after {
+    content: '•';
+    color: rgb(36, 174, 181);
+    font-size: 50px;
+    margin: 0%;
+    position: relative;
+    top: 0px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+/* Nous doublons le trait de l'autre côté du point bleu. */
+
+.hr::after {
+    background-color: #f2f2f2;
+}
+
+/*////////////////////// HEADER //////////////////////////*/
+
+/* Nous donnons à cet endroit les paramètres du header en ajoutant une position fixe ce qui lui permet de rester en haut de l'écran quand nous descendons sur la page. Nous donnons ensuite un padding de 100px ce qui lui donne sa hauteur et une largeur de 100% une marge haute de -100px ce qui permet de compenser la position fixe. Ensuite nous ajoutons une couleur de fond blanc et un z-index le plus haut ce qui lui permet de de reste visible toujours en premier plan.  */
+
+.menuHeader {
+    /*marge du menu place a 0*/
+    position: fixed;
+    padding-top: 100px;
+    top: -100px;
+    background: rgba(255, 255, 255, 1);
+    z-index: 1000000;
+    width: 100%;
+}
+
+/*//////////////////////////LOGO ///////////////////////////*/
+
+/* Nous donnons à cette endroit une hauteur de 80px a l'image logo du header. */
+
+.logo img {
+    height: 80px;
+}
+
+/* Nous entrons à cette endroit les paramètres du logo. 
+Nous commençons par une hauteur de 0 ce qui le positionne en hauteur du header et nous changerons ce paramètre en fonction de la taille des écran.
+Nous ajoutons une marge de 0 ce qui nous permet de le déplacer plus bas, selon la taille d'écran nous lui donnons un float left pour qu'il se positionne sur la gauche de la div où il se trouve ainsi qu'une largeur de 20% et un display block ce qui lui permet d'être considéré en bloque. */
+
+
+#logo {
+    height: 0px;
+    margin-top: 0;
+    margin-left: 3%;
+    float: left;
+    width: 20%;
+    display: block;
+}
+
+/*////////////// MENU NAVIGATION //////////////////////////////*/
+
+/* Nous ajoutons les barres blanche du bouton burger qui range le menu nav. */
+
+.burger {
+    width: 25px;
+    height: 5px;
+    background-color: white;
+    margin: 5px 8px;
+}
+
+/* Nous donnons le paramètre display none a  l'icône pour le faire disparaître sur les petits écran. */
+
+#menu-icon {
+    display: none;
+}
+
+/* Nous ajoutons a cet endroit les paramètres du menu navigation en commençant par le float right ce qui permet de le positionner à droite du logo et un padding de 20px ce qui lui donne une certaine largeur.  */
+
+.navMenu {
+    float: right;
+    padding: 20px;
+}
+
+/* Nous entrons les paramètres des icônes du menu navigation en commençant par un padding de 0 et une couleur de texte blanche, une taille de 30px de texte, une largeur et hauteur de 40px un arrière  plan, centre de couleur bleu et un display hidden pour cacher ce qu'il y a en trop. */
+
+#menu-icon {
+    padding: 0px;
+    color: white;
+    font-size: 30px;
+    display: hidden;
+    width: 40px;
+    height: 40px;
+    background: rgb(36, 174, 181) center;
+}
+
+/* Nous entrons cette fois-çi dans les liens du menu navigation en ajoutant 2 bordures sur 4 et de 4 px ainsi qu'une couleur de fond bleu. */
+
+a:hover#menu-icon {
+    background-color: rgb(36, 174, 181);
+    border-radius: 4px 4px 0 0;
+}
+
+/* Nous enlevons les styles des liens au seins des listes ul. */
+
+ul {
+    list-style: none;
+}
+
+/* Nous ajoutons des paramètres aux boutons contenants la class lbtn en leurs ajoutant un display inline block ce qui permet de retrouver les boutons les uns à côté des autres ainsi qu'un padding de 10px ce qui lui donne une certaine taille et un float left ce qui permet de positionner les boutons à gauche du ul. */
+
+.lbtn {
+    display: inline-block;
+    float: left;
+    padding: 10px
+}
+
+/* Nous donnons cette fois-çi une couleur de texte au texte des boutons du menu navigation. */
+
+.current {
+    color: #2262AD;
+}
+
+/* Nous donnons cette fois-çi au lien du menu navigation les paramètres : float: right pour qu'il se positionne à droite puis un display block ce qui leur permet d'être considérés comme des bloques, une couleur de texte noir et aligné sans décoration. ensuite un padding de 14px et 16px pour la taille qu'il mesure ainsi qu'une bordure de 3px bleu pour qu'elle apparaisse au moment voulu et pour finir une taille de police de 24px. */
+
+.navMenu a {
+    /*parametre de style des boutton du menu*/
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-top: 3px solid transparent;
+    font-size: 24px;
+}
+
+/* Nous ajoutons une bordure et un display block lorsque l'on clique sur les liens du bouton et enfin une marge top de -100px pour compenser le menu fixe. */
+
+navMenu a:target {
+    border-top: 3px solid #24aeb5;
+    display: block;
+    margin-top: -100px;
+}
+
+/* A cette endroit nous ajoutons la bordure bleu sur les bouton du menu navigation lors du passage dessus.  */
+
+.btn:hover {
+    border-top: 3px solid #24aeb5;
+    /*active la bordure bleu en haut des boutton lors du passage de la souris*/
+}
+
+/*//////////////////////// SECTION SLIDESHOW /////////////////////*/
+
+/* Nous donnons cette fois-çi une position relative au container qui contient toute les images avec une largeur de 400% ,avec une hauteur de 550 px ce qui permet d'afficher les images en fond d'écran qui se trouve plus bas et un overflow hidden ce qui permet de cache les 300% de trop. */
+
+#slideshow {
+    position: relative;
+    width: 100%;
+    top: -120px;
+    padding-top: 240px;
+}
+
+/* Avanced box-shadow : http://www.creativejuiz.fr/blog/les-tutoriels/ombre-avancees-avec-css3-et-box-shadow. */
+
+#slideshow:before,
+#slideshow:after {
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    width: 50%;
+    height: 0px;
+    content: " ";
+    z-index: -10;
+    overflow: hidden;
+}
+
+/* Nous ajoutons à cette endroit des transformations qui font tourner le slide de degré et une marge gauche de 0px. */
+
+#slideshow:before {
+    left: 0;
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+}
+
+/* Nous ajoutons les même à droite. */
+
+#slideshow:after {
+    right: 0;
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+}
+
+/*///////////////////////// COMMANDES DES SLIDER //////////////*/
+
+/* Nous réglons les positions et tailles de textes en fonction des légendes et du positionnement des images.  */
+
+#slideshow .commands #fleche1 {
+    position: absolute;
+    margin-top: -43px;
+    margin-left: 5px;
+    font-size: 70px;
+}
+
+#slideshow .commands #fleche2 {
+    position: absolute;
+    margin-top: -37px;
+    margin-left: -43px;
+    font-size: 60px;
+}
+
+#slideshow .commands #fleche3 {
+    position: absolute;
+    margin-top: -43px;
+    margin-left: 5px;
+    font-size: 70px;
+}
+
+#slideshow .commands #fleche4 {
+    position: absolute;
+    margin-top: -37px;
+    margin-left: -43px;
+    font-size: 60px;
+}
+
+#slideshow .commands #fleche5 {
+    position: absolute;
+    margin-top: -43px;
+    margin-left: 5px;
+    font-size: 70px;
+}
+
+#slideshow .commands #fleche6 {
+    position: absolute;
+    margin-top: -37px;
+    margin-left: -43px;
+    font-size: 60px;
+}
+
+#slideshow .commands #fleche7 {
+    position: absolute;
+    margin-top: -43px;
+    margin-left: 5px;
+    font-size: 70px;
+}
+
+#slideshow .commands #fleche8 {
+    position: absolute;
+    margin-top: -37px;
+    margin-left: -43px;
+    font-size: 60px;
+}
+
+/* Need a stop ! */
+
+/* Actions when target ! */
+
+.sl_command {
+    display: none;
+}
+
+.sl_command:target ~ #slideshow #slider,
+.sl_command:target ~ #slideshow figure:after,
+.sl_command:target ~ #slideshow figcaption:first-child a:after {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+#sl_play:target ~ #slideshow #slider,
+#sl_play:target ~ #slideshow figure:after,
+#sl_play:target ~ #slideshow figcaption:first-child a:after {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.sl_command:target ~ #slideshow .pause {
+    opacity: 0;
+}
+
+.sl_command:target ~ #slideshow .play {
+    opacity: 1;
+    right: 25px;
+    cursor: pointer;
+}
+
+#sl_play:target ~ #slideshow .pause {
+    opacity: 0;
+}
+
+#sl_play:target ~ #slideshow .play {
+    opacity: 0;
+    right: 55px;
+    cursor: default;
+}
+
+.sl_i:target ~ #slideshow #slider {
+    visibility: hidden
+}
+
+.sl_i:target ~ #slideshow #slider figcaption {
+    visibility: hidden
+}
+
+#sl_i1:target ~ #slideshow .commands {
+    display: none;
+}
+
+#sl_i1:target ~ #slideshow .commands1 {
+    display: block;
+}
+
+#sl_i1:target ~ #slideshow .c_slider {
+    background-position: 0 0, 33% 0, 66% 0, 99% 0;
+}
+
+#sl_i2:target ~ #slideshow .commands {
+    display: none;
+}
+
+#sl_i2:target ~ #slideshow .commands2 {
+    display: block;
+}
+
+#sl_i2:target ~ #slideshow .c_slider {
+    background-position: -33% 0, 0 0, 33% 0, 66% 0;
+}
+
+#sl_i3:target ~ #slideshow .commands {
+    display: none;
+}
+
+#sl_i3:target ~ #slideshow .commands3 {
+    display: block;
+}
+
+#sl_i3:target ~ #slideshow .c_slider {
+    background-position: -66% 0, -33% 0, 0 0, 33% 0;
+}
+
+#sl_i4:target ~ #slideshow .commands {
+    display: none;
+}
+
+#sl_i4:target ~ #slideshow .commands4 {
+    display: block;
+}
+
+#sl_i4:target ~ #slideshow .c_slider {
+    background-position: -99% 0, -66% 0, -33% 0, 0 0;
+}
+
+/* Nous ajoutons maintenant les paramètres des commandes slider manuel, nous commençons par une position absolue ce qui lui permet de se positionner à l'endroit voulu ainsi nous ajoutons une marge top de 55% ce qui le positionne à mi-hauteur du slider avec un padding pour la taille qu'il fait; une bordure basse de 0 avec une famille de police et une taille de texte pour grossir les crochets qui ont leur propre couleur et ce sans décoration de lien. Nous y ajoutons la couleur de font de façon arrondie avec les border radius. Nous leur ajoutons une ombre et une opacité pour rendre de la transparence au bouton. */
+
+#slideshow .commands {
+    position: absolute;
+    top: 55%;
+    padding: 40px 45px;
+    border-bottom: 0;
+    font-family: 'Amaranth', Arial, Verdana, sans-serif;
+    font-size: 3em;
+    color: #fff;
+    text-decoration: none;
+    background-image: -webkit-linear-gradient(#fff, #ddd);
+    background-image: -moz-linear-gradient(#fff, #ddd);
+    background-image: -ms-linear-gradient(#fff, #ddd);
+    background-image: -o-linear-gradient(#fff, #ddd);
+    background-image: linear-gradient(#212020, #070606);
+    text-shadow: 0 0 1px #aaa;
+    opacity: 0.2;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Nous ajoutons une transformation de grossissement lors du clique. */
+
+#slideshow .commands:focus {
+    outline: 0;
+    -webkit-transform: translate(1px, 2px);
+    -moz-transform: translate(1px, 2px);
+    -ms-transform: translate(1px, 2px);
+    -o-transform: translate(1px, 2px);
+    transform: translate(1px, 2px);
+}
+
+#slideshow .commands:active {
+    -webkit-transform: translate(0, 1px);
+    -moz-transform: translate(0, 1px);
+    -ms-transform: translate(0, 1px);
+    -o-transform: translate(0, 1px);
+    transform: translate(0, 1px);
+}
+
+/* Nous ajoutons des paramètres aux boutons précédent avec une marge gauche de -50px pour le positionner et un z-index de 100 ce qui le place au-dessus de tout les sliders mais derrière le menu. */
+
+#slideshow .prev {
+    left: -50px;
+    z-index: 100;
+}
+
+/* Nous ajoutons des paramètres aux boutons précédents avec une marge gauche de -50px pour le positionner et un z-index de 100 ce qui le place au-dessus de tout les sliders mais derrière le menu. */
+
+#slideshow .next {
+    left: 97.6%;
+    z-index: 100;
+}
+
+/* Nous ajoutons le paramètre display none aux commandes suivant et précédent ce qui permet de les rendre invisible et de les afficher seulement au moment voulu.  */
+
+#slideshow .prev,
+#slideshow .next {
+    display: none;
+}
+
+#slideshow .prev,
+#slideshow .next {
+    display: none;
+}
+
+/* Nous redonnons un display block a la commande 1a ce qui permet de la faire apparaître. */
+
+#slideshow .commands1 {
+    display: block;
+}
+
+/* Play/pause commands. */
+
+.play_commands {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 280px;
+    right: 25px;
+    z-index: 10;
+    text-indent: -9999px;
+    border: 0 none;
+    opacity: 0;
+    -webkit-transition: opacity 1s, right 1s;
+    -moz-transition: opacity 1s, right 1s;
+    transition: opacity 1s, right 1s;
+}
+
+/* Nous ajoutons a cet endroit les paramètres de marge droite au bouton play avec un curseur qui change au passage. */
+
+.play {
+    right: 55px;
+    cursor: default;
+}
+
+/* Nous donnons une bordure nulle au bouton pause. */
+
+.pause:hover {
+    border: 0 none;
+}
+
+/* Nous donnons un paramètre outline au passage du play. */
+
+.play_commands:focus {
+    outline: 0;
+}
+
+/* Nous cachons et faisons apparaître le play et pause en fonction de celui qui est active. */
+
+#slideshow:hover .pause,
+#sl_play:target ~ #slideshow:hover .pause,
+.play_commands:focus {
+    opacity: 0;
+}
+
+.sl_command:target ~ #slideshow:hover .pause,
+#sl_pause:target ~ #slideshow:hover .pause {
+    opacity: 0;
+}
+
+/* Nous donnons les paramètres du pause quand il est enclenché.  */
+
+.pause:after,
+.pause:before {
+    position: absolute;
+    display: block;
+    content: " ";
+    top: 0;
+    width: 38%;
+    height: 22px;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Ainsi qu'une marge qui lui fait prendre la place du play. */
+
+.pause:after {
+    right: 0;
+}
+
+/* Et vice-versa. */
+
+.pause:before {
+    left: 0;
+}
+
+/* Nous entrons dans la création du bouton play en créant des bordures transparentes qui cachent les parties d'une autre ce qui donne l'effet pinter play. */
+
+.play {
+    width: 1px;
+    height: 1px;
+    border-top: 10px solid transparent;
+    border-left: 20px solid #fff;
+    border-left: 20px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 10px solid transparent;
+    opacity: 0;
+}
+
+/* Nous ajoutons la bordure indiqué précédemment. */
+
+.play:hover,
+.play:focus {
+    border-bottom: 10px solid transparent;
+}
+
+/*///////////////CONTAINER DES SLIDER //////////////////////////*/
+
+#slideshow .container {
+    position: relative;
+    width: 400%;
+    height: 550px;
+    overflow: hidden;
+}
+
+/*///////////////////// SLIDER MANUEL ////////////////////////////*/
+
+/* Nous entrons dans les paramètres du slider manuel avec une position absolue ce qui permet de le positionner où l'on souhaite. Une marge de 0 ce qui le bloque dans les coins avec une largeur totale et une hauteur identique que l'automatique. Nous ajoutons également un background-size de 24.9% pour la taille des images car cette fois-çi les images se trouve en fond sur une taille de 25% du la place totale et qui ne se répètes pas. */
+
+#slideshow .c_slider {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 520px;
+    background: url(webagency_images/images/slider/bg1.jpg) 0 0 no-repeat, url(webagency_images/images/slider/bg2.jpg) 25% 0 no-repeat, url(webagency_images/images/slider/bg1.jpg) 50% 0 no-repeat, url(webagency_images/images/slider/bg2.jpg) 75% 0 no-repeat;
+    background-size: 25%;
+}
+
+/* Nous ajoutons le paramètre de transition lors des clique sur la commande voulue. */
+
+.sl_i:target ~ #slideshow .c_slider {
+    -webkit-transition: background 3s;
+    -moz-transition: background 3s;
+    transition: background 3s;
+}
+
+/*///////////////////////////// LEGENDES /////////////////////////*/
+
+/* Nous ajoutons les paramètres aux légendes de slider avec une couleur de texte blanche, une position relative et une largeur de 55% ce qui leur permet de prendre qu'une partie de la taille de chaque image. */
+
+.legendes {
+    color: white;
+    width: 55%;
+    position: relative;
+}
+
+/*///////////////////////////// Legende ///////////////////////////*/
+
+/* Nous ajoutons une taille de 48px aux titres des légendes de slider. */
+
+.titreleg {
+    font-size: 48px;
+}
+
+/* Nous ajoutons le nom avant le titre de la légende avec une couleur bleue et la même taille que le titre.  */
+
+.titreleg:before {
+    font-size: 48px;
+    content: "WEBAGENCY:";
+    color: #24aeb5;
+}
+
+/* Nous ajoutons les paramètres pour les boutons de slider avec une couleur de texte blanc, une hauteur, largeur et padding qui font sa taille ainsi que la position absolute et la marge top qui la positionne et enfin un fond de la couleur bleu. */
+
+.lienSlide {
+    color: white;
+    width: 170px;
+    height: 50px;
+    padding: 15px 30px;
+    background-color: rgb(36, 174, 181);
+    border-bottom: 3px solid rgb(46, 174, 181);
+    position: absolute;
+    top: 95%;
+    z-index: 10;
+}
+
+/* Nous définissons la taille de texte des paragraphes des légendes de slider.  */
+
+.para {
+    font-size: 24px;
+}
+
+/* Nous ajoutons à cette endroit les paramètres pour les légendes de slides. Nous commençons par les positions absolues ce qui permet de les faire bouger sur l'image avec une marge gauche de 2% haute de 50px une largeur de 25% et une hauteur automatique ainsi qu'une opacité de 0 ce qui les rend invisible. Nous les ferons apparaître plus tard. */
+
+.legende1 {
+    position: absolute;
+    left: 2%;
+    top: 50px;
+    opacity: 0;
+    width: 25%;
+    height: auto;
+}
+
+#legende2 {
+    position: absolute;
+    top: 100px;
+    left: 3%;
+    opacity: 0;
+    width: 25%;
+    height: auto;
+}
+
+.legende3 {
+    position: absolute;
+    top: 100px;
+    left: 3%;
+    opacity: 0;
+    width: 25%;
+    height: auto;
+}
+
+.legende4 {
+    position: absolute;
+    top: 100px;
+    left: 3%;
+    opacity: 0;
+    width: 25%;
+    height: auto;
+}
+
+/* Nous donnons une opacité de 1 aux légendes lors du clique sur le bouton correspondant ce qui permet de faire apparaître la légende correspondante sur le slide manuel. */
+
+#sl_i4:target ~ #slideshow .c_slider .legende4 {
+    opacity: 1;
+}
+
+#sl_i3:target ~ #slideshow .c_slider .legende3 {
+    opacity: 1;
+}
+
+#sl_i2:target ~ #slideshow .c_slider #legende2 {
+    opacity: 1;
+}
+
+#sl_i1:target ~ #slideshow .c_slider .legende1 {
+    opacity: 1;
+}
+
+/*/////////////////// SLIDER AUTOMATIQUE ////////////////////////*/
+/* Nous ajoutons ici les paramètres de la section slideshow en commençant avec une position relative ce qui le place tout en haut de la page avec une largeur de 100% une marge et un padding haut pour gérer l'affichage du menu navigation. */
+
+/* Nous ajoutons le mouvement des image du slide. */
+
+@-webkit-keyframes slider {
+    0%,
+    20%,
+    100% {
+        left: 0
+    }
+    25%,
+    45% {
+        left: -25%
+    }
+    50%,
+    70% {
+        left: -50%
+    }
+    75%,
+    95% {
+        left: -75%
+    }
+}
+
+@-moz-keyframes slider {
+    0%,
+    20%,
+    100% {
+        left: 0
+    }
+    25%,
+    45% {
+        left: -25%
+    }
+    50%,
+    70% {
+        left: -50%
+    }
+    75%,
+    95% {
+        left: -75%
+    }
+}
+
+@keyframes slider {
+    0%,
+    20%,
+    100% {
+        left: 0
+    }
+    25%,
+    45% {
+        left: -25%
+    }
+    50%,
+    70% {
+        left: -50%
+    }
+    75%,
+    95% {
+        left: -75%
+    }
+}
+
+/* Nous ajoutons ici les paramètres du slider automatique avec une position absolue ce qui permet de les faire bouger ou l'on souhaite avec une marge de 0 et une largeur de 100% ce qui permet de prendre toute la place disponible sur l'écran et un temps d'animation de 32s et infini ce qui lui permet de tourner à l'infini. */
+
+
+#slideshow #slider {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    -webkit-animation: slider 32s infinite;
+    -moz-animation: slider 32s infinite;
+    animation: slider 32s infinite;
+}
+
+/* Nous donnons la transition de 3 secondes à gauche au slider auto. */
+
+.sl_i:target ~ #slideshow #slider {
+    -webkit-transition: left 3s;
+    -moz-transition: left 3s;
+    transition: left 3s;
+}
+
+/* Puis une opacité sur le même temps. */
+
+.sl_command:target ~ #slideshow #slider {
+    -webkit-transition: opacity 3s;
+    -moz-transition: opacity 3s;
+    transition: opacity 3s;
+}
+
+/*////////////////////// FIGURES ////////////////////////////////*/
+
+/* Nous affichons les légendes avec une position absolue et des marges à 0 ce qui le bloque dans les coins des slides. */
+
+#slideshow figure {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+/* Nous ajoutons les transitions sur les images du slider manuel. */
+
+@-webkit-keyframes figurer {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        -webkit-box-shadow: 0 0 65px rgba(0, 0, 0, 0) inset;
+        box-shadow: 0 0 65px rgba(0, 0, 0, 0) inset;
+    }
+    5%,
+    20%,
+    30%,
+    45%,
+    55%,
+    70%,
+    80%,
+    95% {
+        -webkit-box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+        box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+    }
+}
+
+@-moz-keyframes figurer {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        -moz-box-shadow: 0 0 65px rgba(0, 0, 0, 0) inset;
+        box-shadow: 0 0 65px rgba(0, 0, 0, 0) inset;
+    }
+    5%,
+    20%,
+    30%,
+    45%,
+    55%,
+    70%,
+    80%,
+    95% {
+        -moz-box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+        box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+    }
+}
+
+@keyframes figurer {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        -moz-box-shadow: 0 0 65px rgba(0, 0, 0, 0) inset;
+        box-shadow: 0 0 65px rgba(0, 0, 0, 0) inset;
+    }
+    5%,
+    20%,
+    30%,
+    45%,
+    55%,
+    70%,
+    80%,
+    95% {
+        -moz-box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+        box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+    }
+}
+
+/* Nous ajoutons à cet endroit les paramètres qui suivent les légendes de slide manuel avec des positions absolute et un display bloque ce qui les considèrent en bloc et permet d'être déplacés où tu veux en marge de 0 et largeur à 100% comme la hauteur.  */
+
+#slideshow figure:after {
+    position: absolute;
+    display: block;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+    -moz-box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 0 65px rgba(0, 0, 0, 0.5) inset;
+    -webkit-animation: figurer 32s infinite;
+    -moz-animation: figurer 32s infinite;
+    animation: figurer 32s infinite;
+}
+
+/*///////////////////////////// LEGENDES /////////////////////////*/
+
+/* Nous donnons les paramètres des légendes où nous ajoutons les letters spacing et word spacing, une largeur de 65% et une famille de police.  */
+
+.legende {
+    position: absolute;
+    padding: 30px 30px;
+    margin: 0;
+    left: 3%;
+    top: 5%;
+    width: 65%;
+    letter-spacing: 0.05em;
+    word-spacing: 0.05em;
+    font-family: Georgia, Times, serif;
+    color: white;
+}
+
+/*////////////////// SECTION SERVICES /////////////////////////////*/
+
+/* Idem pour les services. */
+
+#nosServices {
+    margin-top: -110px;
+    padding-top: 130px;
+}
+
+/* Nous donnons une position relative à la section service ce qui lui permet d'être à la suite du slider. */
+
+.sectionService {
+    position: relative;
+}
+
+/* Nous positionnons le point bleu au milieu du trait gris du hr. */
+
+#pointService {
+    background-color: white;
+    margin-top: -60px;
+}
+
+/* Je change la taille des titres de la partie service et nos projets. */
+
+.titreService {
+    font-size: 42px;
+}
+
+/*//////////////////// HAUT SERVICES ///////////////////*/
+
+/* Voici la seconde partie du css qui comprend la section service. */
+
+/* Nous commençons par aligner tous les textes en haut des bloc. */
+
+.hautService {
+    text-align: center;
+}
+
+/*////////////////// BAS SERVICES //////////////////////*/
+
+/* Nous enlevons la couleur de fond des point bleu. */
+
+.bloqueService .serv {
+    margin-left: -2%;
+}
+
+/* Nous rentrons une position absolute au titre du service, ce qui nous permet de le positionner avec des marges haute de -15px et gauche de 20%. 
+Nous demandons à la partie bas des services de prendre 100% de la largeur de la page aux lieux de 30%. */
+
+
+.bloqueService h3 {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.bloqueService p {
+    margin-top: 25px;
+    
+}
+
+/* Puis nous alignon ceux du bas. Cette fois-çi nous ajoutons un display flex direction row pour permettre aux bloc enfants d'être sur la même ligne. */
+
+.basService {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+}
+
+/*////////////////////////// IMAGE DE GAUCHE ////////////////////*/
+
+/* Nous demandons cette fois-çi au bloc qui contient l'image de prendre que 50% de la largeur de la page. */
+
+.imageService {
+    width: 50%;
+}
+
+/* Nous rentrons les paramètres de l'image comme sa taille max et la marge qu'elle doit laisser de libre */
+
+.responsive1 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 10%;
+}
+
+/* Nous donnons une bordure arrondie aux images des services. */
+
+.responsive2 {
+    border: 2px solid lightgray;
+    border-radius: 100px;
+}
+
+/*////////////////////// BLOQUE SERVICES DE DROITE ///////////////*/
+
+/* Nous rentrons dans le bloc qui contient les services en lui indiquant qu'il doit prendre les 50% restant sur la droite de la page. */
+
+.bloqueService {
+    width: 50%;
+}
+
+/* Nous ajoutons à cet endroit une marge gauche de 10% aux paragraphes des services. */
+
+.bloqueService p {
+    margin-left: 0%;
+}
+
+/*///////////////////////////// Service /////////////////////*/
+
+/* Nous donnons une taille de police de 22px et des majuscules aux titres des services. */
+
+.nomService {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Nous demandons aux bloc des services de prendre 80% de la largeur disponible et nous lui donnons une marge gauche de 0 ce qui permet de libérer de l'espace sur la droite et ne pas avoir un texte trop à droite, puis nous lui donnons la commande inline-flex pour que les éléments à l'intérieur soit sur la même ligne. */
+
+.UXdesign {
+    width: 100%;
+    margin-left: 10%;
+    padding-bottom: 90px;
+    display: inline-flex;
+}
+
+.UIdesign {
+    width: 100%;
+    margin-left: 10%;
+    display: inline-flex;
+    padding-bottom: 90px;
+}
+
+.SEO {
+    width: 100%;
+    margin-left: 10%;
+    display: inline-flex;
+    padding-bottom: 20px;
+}
+
+/* Nous déplaçons le titre SEO légèrement plus que les autres pour qu'il se retrouve centré. */
+
+#titreSEO {
+    margin-left: 24%;
+}
+
+/*////////////////// SECTION PROJETS //////////////////////////////*/
+
+/* Nous gérons l'arrivée du menu sur le titre nos projets pour pas qu'il lui passe dessus. */
+
+#nosProjets {
+    margin-top: 130px;
+    padding-top: -130px;
+    padding-top: 50px;
+}
+
+/* Nous demandons que tous les textes de la section soit aligné et avec une couleur de fond gris clair. */
+
+.nosProjets {
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 50px;
+    margin-bottom: 130px;
+}
+
+/* Nous remontons le points bleu sur les traits gris du hr. */
+
+.nosProjets .serv {
+    margin-top: -60px;
+}
+
+/*////////////////// GALERIES ////////////////////////////////////*/
+
+/*//////////////// MENU NAVIGATION GALERIES /////////////////////*/
+
+/*A cette endroit nous demandons en premier lieu aux boutons de se positionner sur la même ligne. En second lieu nous changeons l'apparition du curseur sur le passage des liens boutons. En troisième lieu nous changeons la couleur du texte , sa police et sa taille. Nous ajoutons également un padding pour donné la taille voulue aux blocs liens ce qui donne la représentation bouton avec une petite marge droite pour centrer les boutons. nous retirons les décorations des liens , ajoutons une couleur de fond et enfin nous ajoutons une bordure basse, solide et transparente pour le moment car elle sera active que lors du passage mais doit être créé tout de suite. */
+
+.Buttonnav {
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 12px 12px;
+    margin-right: -10px;
+    text-decoration: none;
+    background-color: rgb(192, 192, 192);
+    border-bottom: 3px solid transparent;
+    z-index: 100000;
+}
+
+/* Nous reprenons les liens boutons en leur ajoutant une couleur de fond et de texte ainsi que la visibilité de la bordure basse. */
+
+.Buttonnav:hover {
+    background-color: #5CADD3;
+    border-bottom: 3px solid rgb(36, 174, 181);
+}
+
+/* Nous ajoutons la visibilité du triangle lors du passage de la souris sur le bouton lien en lui ajoutant une opacité a 1. */
+
+.onglets li:hover .arrow-down {
+    opacity: 1;
+}
+
+/* Nous demandons à la liste de se décaler sur la gauche pour revenir centrée. */
+
+.onglets ul {
+    margin-left: -75px;
+}
+
+/* Nous donnons une position relative aux puces de la liste ce qui nous permettra de modifier la position des boutons lors de leur modification. */
+
+/* Nous mettons les puces sur la même ligne grâce à inline-flex sans oublier les spécifications selon le navigateur puis une marge gauche et à droite pour construire la largeur du bouton.  */
+
+.onglets li {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-left: 30px;
+    margin-right: -36px;
+    position: relative;
+}
+
+/* Nous ajoutons un léger arrondi sur la puce de gauche en la sélectionnant grâce à :first-child et en utilisant border radius sur les bordures top et bottom sans oublier les spécifications pour chaque navigateurs. */
+
+.onglets li:first-child .Buttonnav {
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+/*///////////////////////////// Figures /////////////////////////*/
+
+/* Nous définissons une largeur une marge et une position relative à nos bloc qui contiennent l'ensemble image légende icône. */
+
+/* Nous ajoutons les paramètres inline-block aux légendes du slider pour qu'elle se positionne l'une à côté de l'autre et une taille de 24.9% pour qu'elles puissent être toutes les 4 les unes à côté des autres. */
+
+figure {
+    display: inline-block;
+    width: 24.9%;
+    position: relative;
+    margin: 1em 10px;
+}
+
+/* Nous donnons une largeur totale aux images. */
+
+figure img {
+    width: 100%;
+}
+
+/*///////////////////////////// ficaption ////////////////////////*/
+
+/* Nous changeons la couleur de l'icône générée grâce à font awesomes puis nous ajoutons une bordure ronde que nous réglons grâce aux padding sans oublier de l'espace les un des autres grâce à la marge supérieure. */
+
+/* Nous créons le triangle qui vient ajouter une direction aux boutons. Nous commençons par donner une opacité à 0 pour rendre transparent le bloc. On lui donne une position relative et on le place à l'endroit voulue. Nous y ajoutons ensuite 3 bordures (gauche, droite et haute) sur une certaine largeur de façon solide. Nous ajoutons également de la transparence a deux des 3 bordures et une couleur à la troisième ce qui nous permet de cache de façon similaire les bordures en trop et y laisser qu'un petit triangle. */
+
+.arrow-down {
+    opacity: 0;
+    position: relative;
+    top: 43px;
+    left: -40px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(36, 174, 181);
+}
+
+/* Projets */
+
+#projets {
+	text-align: center;
+	margin-top: 5px;
+	padding-top: 15px;
+	background-color: #F5F5F5;
+	
+}
+
+
+/* Sous menu*/
+
+#portfolio ul{
+	
+	
+	list-style-type: none;
+	background-color: lightgray;;
+	padding-left: 0px;
+	margin-bottom: 36px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	height: 45px;
+	color: #64686D;
+	font-size: 12px;
+	text-decoration: none;
+    
+
+}
+
+#portfolio ul li{
+	display: inline-block;
+	
+	height:45px;
+	cursor: pointer;
+	margin-right: -25px;
+	font-weight: bold;
+    text-decoration: none;
+   
+}
+
+#portfolio ul a{
+	display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+#portfolio ul a li {
+    text-decoration: none;
+}
+
+#portfolio .active{
+	background-color: #64A6FB;
+	color:white;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom: solid #468CAD;
+	height: 45px;
+
+
+}
+
+#portfolio li:hover{
+	background-color: #24aeb5;
+	color:white;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom: solid #468CAD;
+	height: 45px;
+}
+
+.my_caret {
+	color: #468CAD;
+    position: relative;
+    font-size: 30px;
+    right: 35px;
+    top: 33px;
+    opacity: 0;
+}
+
+.my_caret.activeli{
+	opacity: 100;
+}
+
+#portfolio a:hover .my_caret {
+	opacity: 100;
+}
+
+
+/* Miniatures*/
+.exemples img {
+
+	width: 20% ;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+.exemples p {
+	display: inline;
+}
+
+
+.img_container{
+	width:20%;
+	margin-right: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+.img_container img{
+	width:100%;
+}
+
+@keyframes monanimation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-100px);
+    }
+
+}
+
+.imghover{
+	background: rgba(0,0,0,0.5);
+	width:100%;
+	height:95px;
+	position: absolute;
+	bottom:15px;
+	color:white;
+	visibility: hidden;
+
+}
+
+.fa-eye {
+	position: absolute;
+    left: -2px;
+    
+    color: white;
+    border: solid white;
+    border-radius: 52px;
+    background-color: #24aeb5;
+    font-size: 16px;
+    padding: 16px;
+    border-width: 2px;
+}
+
+.img_container:hover .imghover {
+	visibility: visible;
+	animation: monanimation 1s;
+}
+/*////////////////SECTION CONTACT //////////////////////////////*/
+
+/*/////////////////////////////// MAPS /////////////////////*/
+
+/* Nous donnons une position relative à notre div maps qui contient l'image de la carte, cela permet à l'image de rester sur la taille d'écran. */
+
+.maps {
+    position: relative;
+    margin-top: -130px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+}
+
+/*///////////////////////////// FORMULAIRE //////////////////////*/
+
+/* Nous donnons les paramètres au formulaire en commençant par sa couleur de fond blanche à laquelle nous ajoutons une opacité, nous ajoutons ensuite la hauteur et largeur du formulaire avant de lui donner une position absolue ce qui nous permet enfin de lui donner des marges pour le positionner comme convenue. */
+
+.formulaire {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 540px;
+    width: 350px;
+    position: absolute;
+    margin-top: -45%;
+    margin-left: 45%;
+    margin-right: 10%;
+    border-radius: 2px;
+}
+
+/* Nous ajoutons une petite marge identique à celle des champs de textes au titre du formulaire pour qu'il soit aligné avec les champs de textes. */
+
+.contact {
+    margin-left: 10%;
+}
+
+/* Nous rentrons cette fois-çi un paramètre de largeur plus petit que celui du formulaire, aux champ qui le compose ce qui donne le style donné, en plus d'une marge qui le centre. Nous lui ajoutons également une hauteur ce qui permet d'être cohérent avec la taille du reste de la page. */
+
+.saisie {
+    width: 80%;
+    height: 30px;
+    margin-left: 10%;
+}
+
+/* Nous donnons à cet endroit une hauteur au teixeira message du formulaire ce qui le rend plus grand que les autres champs. */
+
+#textarea {
+    height: 150px;
+}
+
+/* Nous donnons des tailles à notre bouton envoyer ainsi qu'une couleur de fond et une marge pour rester aligné avec le reste des champs de textes du formulaire. */
+
+#envoyer {
+    width: 150px;
+    height: 40px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    background-color: #24aeb5;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: lightgray;
+}
+
+/* et le formulaire */
+
+#form {
+    margin-top: 130px;
+    padding-top: -130px;
+    width: 100%;
+    height: 850px;
+}
+
+/*///////////////////// FOOTER ////////////////////////////////////*/
+
+/* Nous ajoutons une couleur de fond et de texte au footer en alignant le texte et donnant une hauteur au bloc. */
+
+footer {
+    background-color: rgb(36, 174, 181);
+    color: white;
+    text-align: center;
+    height: 170px;
+    position: relative;
+}
+
+/*//////////////////////////// COPYRIGHT /////////////*/
+
+/* Nous donnons une largeur max au footer. */
+
+.copy {
+    width: 100%;
+    
+}
+
+/*///////////////// RESPONSIVE //////////////////*/
+
+/* Nous entrons ici dans les parties qui gère le responsive pour ecran qui vont jusqu'à 2000px. */
+
+@media screen and (max-width: 2000px) {
+
+    /*////////// SECTION SLIDESHOW ///////////////////////////*/
+    /* Nous donnons une hauteur de 720px au slideshow pour les grands écrans car les images sont grossies donc prennent plus de place. */
+    #slideshow {
+        height: 720px;
+    }
+
+    /*///////////////////////// COMMANDES DES SLIDER /////////////*/
+    /* Nous plaçons les commandes à 55% de hauteur du slider pour les positionner au millieu du slide.  */
+    #slideshow .commands {
+        top: 65%;
+    }
+}
+
+/*////////////// RESPONSIVE ////////////*/
+
+/* Nous arrivons dans les paramètres jusqu'à 1900px. */
+
+@media screen and (max-width: 1900px) {
+
+    /*////////////// SECTION SLIDESHOW ///////////////////////////*/
+    /* Nous réduisons légèrement la hauteur du slideshow en fonction de la taille des images avec une largeur max puis la commande play. */
+    #slideshow {
+        height: 700px;
+        max-width: 100%;
+    }
+
+    /*///////////// COMMANDES DES SLIDER /////////////////*/
+    #slideshow .commands .next {
+        max-width: 100%;
+    }
+
+    /*/////////////////LOGO ////////////*/
+    /* Nous amenons le logo avec une marge haute de 40px pour le positionner de façon centré par rapport au menu. */
+    a#logo {
+        margin-top: 40px;
+    }
+}
+
+/*////////////// RESPONSIVE ///////////////////*/
+
+/* Nous entrons cette fois-çi dans les paramètres qui vont jusqu'à 1500px. */
+
+@media screen and (max-width: 1500px) {
+
+    /*///////// SECTION SLIDESHOW ///////////////////////////*/
+    /* Nous réduisons la hauteur du slide en fonction des images.  */
+    #slideshow {
+        height: 620px;
+    }
+
+   /*///////////////////////////// LEGENDES ////////////*/
+    /* Nous ajoutons une marge gauche aux légendes du slide pour le repositionner en fonction de la taille d'écran. */
+    .legendes {
+        left: 2%;
+    }
+
+    /*/////////// COMMANDES DES SLIDER ////////////////////////////*/
+    /* Nous ajustons la hauteur des commandes suivant et précédent en fonction de la taille du slide et des images.  */
+    #slideshow .commands {
+        top: 65%;
+    }
+}
+
+/*//////////////////////// RESPONSIVE /////////////////////*/
+
+/* Nous entrons ici dans les paramètres pour les écrans allant jusqu'à 1400 px. */
+
+@media screen and (max-width: 1400px) {
+
+    /*///////////////////////////// Legende /////////////*/
+    /* Nous donnons ici une marge haute a 0 ce qui permet de coller en haut les légendes en plus d'une largeur de 20% ce qui lui donne sa taille en fonction de l'image.  */
+    #legende2 {
+        top: 0px;
+        width: 20%;
+    }
+
+    .legende3 {
+        top: 0px;
+        width: 35%;
+    }
+
+    .legende4 {
+        top: 0px;
+        width: 35%;
+    }
+
+    /* Nous ajustons les tailles de police des titres et textes de la page. */
+    .titreleg:before {
+        font-size: 36px;
+    }
+
+    .titreleg {
+        font-size: 32px;
+    }
+
+    .para {
+        font-size: 18px;
+    }
+
+    /*///////////////////////////// FORMULAIRE //////////////*/
+    /* Nous ajustons la taille du teixeira commentaire du formulaire. */
+    #textarea {
+        height: 30px;
+    }
+
+    /* Nous ajustons la taille cette fois-çi du formulaire en fonction de la taille de l'image de la carte.  */
+    .formulaire {
+        height: 420px;
+    }
+
+    /*///////////////////////// COMMANDES DES SLIDER //////////////*/
+    /* Nous ajustons la hauteur des commandes en fonction de la taille du slide et des images du slider.  */
+    #slideshow .commands {
+        top: 75%;
+    }
+}
+
+/*/////////// RESPONSIVE ///////////////////////////*/
+
+/* Nous ajoutons cette fois-çi les paramètres de tailles qui rentre en compte seulement sur les écrans plus grand que 1400px.  */
+
+@media screen and (min-width: 1400px) {
+
+    /*//////////////////LOGO ///////////////////*/
+    /* Nous ajustons la taille du logo en hauteur pour le centrer par rapport au menu.  */
+    a #logo {
+        margin-top: 40px;
+        
+    }
+}
+
+/*////////////////// RESPONSIVE //////////////////////////*/
+
+/* Nous ajoutons les paramètres à ajuster pour les écrans plus petit que 1300px. */
+
+@media screen and (max-width: 1300px) {
+.formulaire {
+    
+    margin-top: -45%;
+    margin-left: 35%;
+    
+}
+    /*///////////// SECTION SLIDESHOW ///////////////////////////*/
+    /* Nous ajustons la hauteur du slideshow en fonction de la taille des images.  */
+    #slideshow {
+        height: 550px;
+    }
+
+    /*///////////////// MAPS //////////////////////////////////////*/
+    /* Nous ajustons la taille de la carte pour l'apparition du menu fixe tout en restant cohérent de base. */
+    .maps {
+        margin-top: -130px;
+        padding-top: 0px;
+        
+    }
+
+    /*////////////////////////////// MENU NAVIGATION/////*/
+    /* Nous ajoutons une marge top au menu ce qui permet de gérer le menu fixe en fonction des cliques.  */
+    .menuheader {
+        margin-top: -200px;
+    }
+}
+
+/*////////////////////// RESPONSIVE ///////////////////////////*/
+
+/* Nous ajoutons les paramètres à ajuster pour les écrans plus petit que 1200px. */
+
+@media screen and (max-width: 1200px) {
+    
+    
+    #exemples{
+    justify-content: space-between;
+    
+    margin: auto;
+    }
+    /*//////////// COMMANDES DES SLIDER ///////////////////*/
+    /* Nous ajustons la hauteur des commandes en fonction de la taille du slide et des images du slider.  */
+    #slideshow .commands {
+        top: 65%;
+    }
+
+    /*///////////// CONTAINER DES SLIDER //////////////////////////*/
+    /* Nous ajustons la taille du conteneur avec une marge top de 0 ce qui lui permet de gérer le menu en restant en haut de la page.  */
+    #slideshow .container {
+        top: 0px;
+        height: 520px;
+    }
+
+    /*////////////////// Legende /////////////////*/
+    /* Nous ajustons les paramètres de légende 2. */
+
+    #legende2 {
+        top: 50px;
+        width: 35%;
+    }
+   
+}
+
+/*///////////////// RESPONSIVE //////////////////////////////*/
+
+/* Nous ajoutons les paramètres à ajuster pour les écrans plus petits que 1100px. */
+
+@media screen and (max-width: 1100px) {
+
+    /*///////////////////////////// FORMULAIRE ///////////////////*/
+    /* Nous ajoutons les paramètres de marges du formulaire ce qui permet d'ajuster son positionnement. */
+    .formulaire {
+        margin-top: -65%;
+        margin-left: 35%;
+    }
+
+    /*/////////// SECTION SLIDESHOW ///////////////////////////*/
+    /* Nous ajustons la hauteur du slideshow en fonction de la taille d'images.  */
+    #slideshow {
+        height: 470px;
+    }
+
+    /*///////////// COMMANDES DES SLIDER ///////////////////*/
+    /* Nous ajustons la hauteur des commandes en fonction de la taille du slide et des image du slider. */
+    #slideshow .commands {
+        top: 75%;
+    }
+}
+
+/*////////////////////// RESPONSIVE ////////////*/
+
+/* Nous ajoutons les paramètres à ajuster pour les écrans plus petits que 1000px. */
+@media screen and (max-width: 1000px) {
+
+   /* SECTION 3 */
+    #menu_exemples{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    /* IMAGES  */
+    .p_exemple{
+        opacity: 0;
+    }
+    .img_exemples i{
+        opacity: 0;
+    }
+    .img_exemples:hover .p_exemple{
+        opacity: 1;
+    }
+    .img_exemples:hover i{
+        opacity: 1;
+    } /*/////////////// MENU NAVIGATION///////////*/
+    /* Nous ajustons les paramètres de tailles des boutons et des textes du menu navigation. */
+    .navMenu a {
+        font-size: 20px;
+        padding: 10px 13px;
+    }
+
+    /*/////////////// CONTAINER DES SLIDER /////////////////*/
+    /* Nous ajustons les parametre de hauteur du contenaire slideshow en fonction de la taille d'image */
+    #slideshow .container {
+        top: 0px;
+        height: 520px;
+    }
+
+    /*//////////////// COMMANDES DES SLIDER //////////////////*/
+    /* Nous ajustons les paramètres de hauteur du conteneur slideshow en fonction de la taille d'images. */
+    #slideshow .commands {
+        top: 75%;
+    }
+
+    /* Nous ajustons la hauteur des commandes suivant en fonction de la taille d'images.  */
+    #slideshow .next {
+        left: 96%;
+    }
+
+    /*///////////////// LEGENDES ////////////////////////*/
+    /* Nous ajustons la taille des textes titres.  */
+    figure .titreleg {
+        font-size: 32px;
+    }
+
+    figure .para {
+        top: 300px;
+        font-size: 12px;
+    }
+    /* Nous ajustons la taille largeur et les marges aux légendes de slide. */
+    .legende1 {
+        top: 0px;
+        left: -3%;
+        width: 45%;
+    }
+
+    .legende3 {
+        top: 0px;
+        width: 35%;
+    }
+
+    .legende4 {
+        top: 0px;
+        width: 35%;
+    }
+
+    /* Nous ajustons la taille des titres et paragraphes des légendes. */
+    .titreleg:before {
+        font-size: 36px;
+    }
+
+    .titreleg {
+        font-size: 32px;
+    }
+
+    .para {
+        font-size: 18px;
+    }
+
+    /*/////////////// FORMULAIRE //////////////////////////////////*/
+    /* Nous modifions les paramètres du formulaire pour l'ajuster en taille en fonction de la taille d'image maps avec une hauteur et largeur plus petite et des marges modifiées qui sont gérées grâce à la position absolute  */
+    .formulaire {
+        height: 320px;
+        width: 250px;
+        position: absolute;
+        margin-top: -75%;
+        margin-left: 35%;
+        margin-right: 10%;
+    }
+
+    /* Nous modifions la largeur et hauteur des champs de textes du formulaire ainsi que leurs marges pour les centre. */
+    .saisie {
+        width: 80%;
+        height: 20px;
+        margin-left: 10%;
+    }
+
+    /* Nous ajustons la taille du teixeira en fonction de la taille du formulaire.  */
+    #textarea {
+        height: 20px;
+    }
+
+    /* Nous modifions la taille de textes du formulaire et la marge des textes pour les centres. */
+    .contact {
+        font-size: 10px;
+        margin-left: 10%;
+    }
+
+    /* Nous modifions la taille de textes du formulaire et la marge des textes pour les centres. */
+    .Contact {
+        font-size: 14px;
+        
+    }
+    .img_container {
+		width: 35%;
+	}
+
+	 .imghover  {
+		display: none;
+	}
+
+	
+	#menu {
+		position : absolute;
+		float: left;
+
+	}
+
+	#conteneur {
+		flex-direction: column;
+	}
+
+}
+
+/*//////////////////// RESPONSIVE /////////////////////////*/
+
+/* Nous entrons dans les paramètres d'écrans plus petit que 900px. */
+
+@media screen and (max-width: 900px) {
+
+    /*/////////////// SECTION SLIDESHOW ///////////////////////////*/
+    /* Nous ajustons la taille du slideshow en fonction de la taille des images. */
+    #slideshow {
+        height: 400px;
+    }
+
+    /*/////////////// COMMANDES DES SLIDER //////////////////*/
+    /* Nous ajustons le positionnement des commandes suivant et précédent en hauteur.  */
+    #slideshow .commands {
+        top: 85%;
+    }
+
+    /*///////////////////////////// LEGENDES /////////////////*/
+    /* Nous ajustons la largeur et le positionnement des légendes de slide.  */
+    #legende2 {
+        top: 0px;
+        width: 35%;
+    }
+
+    #legende3 {
+        top: 0px;
+        width: 35%;
+    }
+
+    #legende4 {
+        top: 0px;
+        width: 35%;
+    }
+
+    /* Nous ajustons la taille de texte des titres et paragraphes des légendes. */
+    .titreleg:before {
+        font-size: 28px;
+    }
+
+    .titreleg {
+        font-size: 24px;
+    }
+
+    .para {
+        font-size: 14px;
+    }
+}
+
+/*////////////// RESPONSIVE /////////////////////////////////*/
+/* Nous entrons les paramètres pour les écrans plus petit que 800px. */
+
+@media screen and (max-width: 800px) {
+
+    /*/////////////////// MENU NAVIGATION //////////////////*/
+    /* Nous ajustons la taille de textes et la la taille des boutons du menu navigation. */
+    .navMenu a {
+        font-size: 16px;
+        padding: 10px 13px;
+    }
+
+    /*/////////// COMMANDES DES SLIDER ////////////////////////////*/
+    /* Nous ajustons la hauteur des boutons suivant et précédent. */ 
+    #slideshow .commands {
+        top: 85%;
+    }
+    .exemples {
+    margin-top: 50px;
+}
+	.img_container  {
+			width: 80%;
+        display: block;
+        margin-left: 10%;
+        
+	}
+
+	#projets ul li {
+		    padding: 14px 19px 6px 5px;
+	}
+    #portfolio ul a {
+	display: block;
+        
+}
+}
+
+/*////////////////// RESPONSIVE //////////////////////*/
+
+/* Nous entrons les paramètres d'écrans plus petit que 750px. */
+
+@media screen and (max-width: 750px) {
+
+
+    .maps {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+   .copy #flecheHaut {
+    width: 10%;
+        margin-left: 0%;
+    margin-top: -0%;
+} /*///////////////// HEADER /////////////////////////////////////*/
+    /* Nous donnons cette fois-çi une position absolute au header pour le positionner où l'on souhaite. */
+    header {
+        position: absolute;
+    }
+
+    /*////////////////////////////////LOGO ///////////////////////*/
+    /* Nous ajustons la taille du logo pour le centré sur la taille d'écran et le menu. */
+    a#logo {
+        margin-top: 0px;
+    }
+
+    /* Nous donnons le paramètre inline-block pour qu'il puisse se mettre les uns en dessous des autres lorsque il y a plus de place sur le côté.  */
+    #menu-icon {
+        display: inline-block;
+    }
+
+    /* Nous ajustons la largeur du logo. */
+    #logo {
+        width: 40%;
+    }
+
+    /*//////////////////// MENU NAVIGATION/////////////////////*/
+    /* Nous ajoutons des paramètres lorsque que la classe :active est présente sur le menu navigation. */
+    .navMenu ul,
+    nav:active ul {
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background: #fff;
+        right: 0px;
+        top: 60px;
+        width: 100%;
+    }
+
+    /* Nous ajustons la largeur et le positionnement des textes et des boutons du menu. */
+    nav li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .navMenu a {
+        float: none;
+    }
+
+    /* Nous ajoutons le bloque lors du passage. */
+    nav:hover ul {
+        display: block;
+    }
+
+    /*/////////////// SECTION SLIDESHOW ///////////////////////////*/
+    /* Nous ajustons la hauteur du slideshow en fonction de la taille d'image. */
+    #slideshow {
+        height: 350px;
+    }
+
+    /*///////////////////////// COMMANDES DES SLIDER /////////////*/
+    /* Nous ajustons la taille et positionnement des commandes comme la taille des flèches. */
+    #slideshow .commands {
+        top: 95%;
+        padding: 30px;
+        font-size: 10px;
+    }
+
+    #slideshow .commands #fleche1 {
+        font-size: 50px;
+        top: 70%;
+    }
+
+    #slideshow .commands #fleche2 {
+        font-size: 50px;
+        top: 60%;
+        right: 30px;
+    }
+
+    #slideshow .commands #fleche3 {
+        font-size: 50px;
+        top: 70%;
+    }
+
+    #slideshow .commands #fleche4 {
+        font-size: 50px;
+        top: 60%;
+        right: 30px;
+    }
+
+    #slideshow .commands #fleche5 {
+        font-size: 50px;
+        top: 70%;
+    }
+
+    #slideshow .commands #fleche6 {
+        font-size: 50px;
+        top: 60%;
+        right: 30px;
+    }
+
+    #slideshow .commands #fleche7 {
+        font-size: 50px;
+        top: 70%;
+    }
+
+    #slideshow .commands #fleche8 {
+        font-size: 50px;
+        top: 60%;
+        right: 30px;
+    }
+
+    #slideshow .prev {
+        left: -30px;
+        z-index: 100;
+    }
+
+    #slideshow .next {
+        right: -25px;
+        z-index: 100;
+    }
+
+   /*////////////CONTAINER DES SLIDER //////////////////////////*/
+    #slideshow .container {
+        top: 0px;
+        height: 520px;
+    }
+
+    /*/////////////// LEGENDES ////////////////////////////////////*/
+    /* Nous ajustons ici le positionnement haut des légendes figures boutons. */
+    figure .lienSlide {
+        top: 185%;
+    }
+
+    /* Nous ajustons la taille des légendes et de leurs textes comme leur positionnement. */
+    figure .titreleg {
+        position: absolute;
+        top: -10%;
+        font-size: 18px;
+    }
+
+    figure .para {
+        position: absolute;
+        top: 65px;
+        font-size: 12px;
+    }
+
+    /*///////////// SECTION SERVICES ///////////////*/
+    /* Nous demandons à la partie bas des services de prendre 100% de la largeur de la page au lieu de 50%. */
+    .bloqueService {
+        margin-top: 25%;
+        width: 90%;
+            margin-left: -5%
+    }
+
+   /*//////////////////////////// BAS SERVICES //////////////////*/
+    /* Nous demandons à la partie bas des services de prendre 100% de la largeur de la page au lieu de 50%. */
+    /* Nous ajustons la marge du bloque bas service pour corriger le manque de l'image sur petits écrans. */
+    .basService {
+        margin-top: 0%;
+        width: auto;
+        margin-left: 0px;
+        display: block
+    }
+
+    /*//////////// IMAGE DE GAUCHE ////////////////////////////////*/
+    /* Nous demandons à la partie bas des services qui contient l'image d'écran soit caché sur les petits écrans. */
+    .imageService {
+        display: block;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .nosProjets {
+        margin: 20px;
+        margin-bottom: 50px;
+    }
+    /*///////// Service /////////////////////////////////////*/
+   /* Nous ajustons les paramètres de taille et de positionnement du titre de bloque service . Nous lui ajoutons également une taille de police appropriée et un uppercase pour mettre les lettres en majuscule. */
+    .nomService {
+        padding: 25px;
+        margin-left: 10%;
+        margin-bottom: 120px;
+        margin-top: 120px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    /* Nous ajustons la taille des police des bloque service. */
+    .paraService {
+        width: 50%;
+        font-size: 12px;
+       margin-left: -25%;
+    }
+    .servises {
+    font-size: 11px;
+    padding-left: 0px;
+}
+    .titreService {
+        font-size: 24px;
+    }
+
+    .paraProjet {
+        font-size: 14px;
+    }
+
+    /* Nous ajustons les margin et padding du bloque pour gérer l'apparition du menu fixe lors du clique sans que le titre service soit caché par le menu navigation.  */
+    /* Nous déplaçons les titres h3 de 35% sur la droite ce qui permet de les replacer au centre par rapport aux paragraphe en dessous. */
+    .bloqueService h3 {
+        margin-top: -180px;
+        margin-bottom: -200px;
+        margin-left: 40%;
+    }
+
+    /* Nous effectuons le même procédé avec le paragraphe ce qui permet de l'ajuster en rapport au titre précédemment réajusté. */
+    /* Nous demandons au service de prendre 100% de la largeur de la page au lieu de 80%. */
+    .bloqueService p {
+        margin-top: -100px;
+        margin-bottom: 40px;
+        width: 100%;
+        margin-left: -25%;
+    }
+
+    /* Nous demandons à la partie bas des services qui contient les fonds awesomes soit caché sur les petits écrans. */
+    .bloqueService .fas {
+        display: inline-flex;
+        margin-top: -25%;
+        
+    }
+
+    /* Nous demandons à la partie bas des services qui contient les point bleu soit caché sur les petits écrans. */
+    .bloqueService .serv {
+        display: inline-block;
+        margin-left: -38%;
+        margin-top: -25%;
+    }
+
+    /* Comme plus haut, il nous faut décaler légèrement plus le titre SEO pour qu'il se trouve aux millieu. */
+    #titreSEO {
+        margin-left: 43%;
+    }
+
+    /*///////// MENU NAVIGATION GALERIES //////////////////////////*/
+    /* Nous replaçons aux bonne endroit la liste de bouton pour les smartphone. */
+    .onglets ul {
+        margin-left: -78px;
+    }
+
+    /* Nous redéfinissons les triangles. */
+
+    .arrow-down {
+        position: relative;
+        top: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid rgb(59, 131, 166);
+    }
+
+    /* Nous donnons une petite marge pour le téléphone. */
+    .onglets li {
+        display: block;
+        margin-left: 10px;
+    }
+
+    /*///////////// GALERIE X ////////////////////////////////////*/
+    /* Nous changeons le display des images en bloc pour qu'elles se place les une en dessous des autre sur les smartphones. */
+    .imgcontainer:target {
+        display: block;
+    }
+
+    /*/////////////// Figures /////////////////////////////////////*/
+    /* Nous ajustons la largeur des légendes et leur marge pour les positionner en fonction de la taille d'image slide.  */
+    .imgcontainer figure {
+        width: 90%;
+        margin-left: -15%;
+    }
+
+    /* Nous redéfinissons la taille des images de façon correcte pour les téléphones. */
+    figure {
+        width: 80%;
+        position: relative;
+        margin: 1em 10px;
+    }
+
+    /* Nous donnons ici une nouvelle taille au image pour qu'elle puisse se trouver l'une à côté de l'autre sur tout le slider.  */
+    figure {
+        display: inline-block;
+        width: 24.8%;
+    }
+
+    /*/////////////////////////////// MAPS //////////*/
+   /* Nous déplaçons le bloque image sur la droite pour que le point rouge avec l'adresse reste visible. */
+    
+
+    /*///////////////////////////// FORMULAIRE //////////////////*/
+    /* Nous déplaçons le formulaire de 25% pour les smartphones au lieu de 60% pour les autres supports. Cela permet de le placer au milieu de la page. */
+    .formulaire {
+        margin-left: 25%;
+        margin-top: -100%;
+    }
+}
+
+/*////////////// RESPONSIVE /////////////////////*/
+
+/* Nous entrons les paramètres pour les écrans plus petits que 650px. */
+
+@media screen and (max-width: 650px) {
+
+    /*//////////////// SECTION SLIDESHOW ///////////////////*/
+    /* Nous ajustons une fois de plus la taille du slideshow. */
+    #slideshow {
+        height: 350px;
+    }
+
+    /*///////// COMMANDES DES SLIDER ////////////////////////////*/
+    /* Et le positionnement des commandes suivantes. */
+    #slideshow .next {
+        left: 95%;
+    }
+}
+
+/*////////////// RESPONSIVE ///////////////////*/
+
+/* Nous entrons dans les paramètres des écrans de taille plus petits que 550px. */
+
+@media screen and (max-width: 550px) {
+    .bloqueService {
+        margin-top: 30%;
+    }
+    /*///////////////// HEADER ///////////////////////*/
+    /* Nous ajustons le slideshow en fonction de la taille d'image. */
+    #slideshow {
+        height: 290px;
+    }
+
+    /*////////////////////LOGO //////////////*/
+    /* Nous ajustons la marge haute du logo pour qu'il reste centré en rapport au menu qui est en burger sur cette taille.  */
+    a#logo {
+        margin-top: 4%;
+    }
+
+    /*////////// COMMANDES DES SLIDER ////////////////////////////*/
+    /* Nous ajustons les positionnement et taille des commandes de slider. */
+    #slideshow .commands {
+        top: 105%;
+        padding: 20px;
+    }
+
+    #slideshow .commands #fleche1 {
+        font-size: 30px;
+        top: 110%;
+    }
+
+    #slideshow .commands #fleche2 {
+        font-size: 30px;
+        top: 85%;
+        right: 25px;
+    }
+
+    #slideshow .commands #fleche3 {
+        font-size: 30px;
+        top: 110%;
+    }
+
+    #slideshow .commands #fleche4 {
+        font-size: 30px;
+        top: 85%;
+        right: 25px;
+    }
+
+    #slideshow .commands #fleche5 {
+        font-size: 30px;
+        top: 110%;
+    }
+
+    #slideshow .commands #fleche6 {
+        font-size: 30px;
+        top: 85%;
+        right: 25px;
+    }
+
+    #slideshow .commands #fleche7 {
+        font-size: 30px;
+        top: 110%;
+    }
+
+    #slideshow .commands #fleche8 {
+        font-size: 30px;
+        top: 85%;
+        right: 25px;
+    }
+
+    #slideshow .prev {
+        left: -25px;
+        z-index: 100;
+    }
+
+    #slideshow .next {
+        right: -25px;
+        z-index: 100;
+    }
+
+    /*/////////CONTAINER DES SLIDER ////////////*/
+    #slideshow .container {
+        top: 0px;
+        height: 520px;
+    }
+
+    /*/////////// Legende ////////////////////*/
+    .legende1 {
+        top: 0px;
+        left: 0%;
+        width: 100%;
+    }
+
+    #legende2 {
+        top: 0px;
+        left: 0%;
+        width: 100%;
+    }
+
+    .legende3 {
+        top: 0px;
+        left: 0%;
+        width: 100%;
+    }
+
+    .legende4 {
+        top: 0px;
+        left: 0%;
+        width: 100%;
+    }
+
+   /*/////////////////// FIGURES //////////////////////*/
+   /* Nous réduisons une fois de plus la taille d'image pour qu'elle se positionne l'une à côté de l'autre en fonction de la taille d'écran. */
+    figure {
+        display: inline-block;
+        width: 24.7%;
+    }
+
+    /*///////////// LEGENDES ////////////////////////////////////*/
+    .legendes .lienSlide {
+        top: 40px;
+    }
+
+    .legendes {
+        display: inline-block;
+        width: 24.7%;
+    }
+
+    .legendes .titreleg {
+        position: absolute;
+        width: 100%;
+        margin-top: -3%;
+        font-size: 10px;
+    }
+
+    .legendes .titreleg:before {
+        top: -10%;
+        font-size: 12px;
+    }
+
+    .legendes .para {
+        position: absolute;
+        top: 5px;
+        font-size: 10px;
+        width: 100%;
+    }
+
+    figure .titreleg {
+        position: absolute;
+        width: 100%;
+        top: -20%;
+        font-size: 12px;
+    }
+
+    figure .titreleg:before {
+        top: -10%;
+        font-size: 14px;
+    }
+
+    figure .para {
+        position: absolute;
+        top: 20px;
+        font-size: 10px;
+        width: 100%;
+    }
+
+    /* Nous ajustons la taille des boutons  des légendes de slide. */
+    .lienSlide {
+        height: 25px;
+        width: 110px;
+        padding: 1px 5px;
+    }
+
+    /* Nous positionnons le bouton dès légendes de slider. */
+    figure .lienSlide {
+        top: 90%;
+    }
+
+    .legende {
+        width: 90%;
+    }
+
+    .legendes {
+        left: 1%;
+        width: 20%;
+    }
+
+    /*/////////////// Service /////////////////////////////////////*/
+    .nomService {
+        padding: 25px;
+        font-size: 14px;
+        text-transform: uppercase;
+        
+    }
+
+    .paraService {
+        margin-top: 50px;
+        font-size: 10px;
+        margin-left: -25%;
+    }
+
+    .titreService {
+        font-size: 24px;
+    }
+
+    .paraProjet {
+        font-size: 14px;
+    }
+
+    /*///////////////// FORMULAIRE ////////////////////*/
+    /* Nous ajustons la taille et le positionnement du formulaire en fonction de la taille de l'img carte et de la taille de l'écran en plus de gérer le positionnement du menu nav lors du clique. */
+    .formulaire {
+        margin-left: 15%;
+        margin-top: -120%;
+    }
+}
+
+/*////////// RESPONSIVE //////////////////*/
+
+/* Nous arrivons sur les paramètre d'écran plus petit que 350px. */
+
+@media screen and (max-width: 350px) {
+.bloqueService {
+        margin-top: 50%;
+    }
+    /*////////////////////// BLOQUE SERVICES DE DROITE /////////*/
+    /* Nous ajustons ici le positionnement des titre du bloque service pour les centre. */
+    .bloqueService h3 {
+        margin-left: 50px;
+    }
+
+    /*/////////////// Service /////////////////////////////////////*/
+    /* Même procédé pour ce titre. */
+    #titreSEO {
+        margin-left: 70px;
+    }
+
+    /*/////////// FORMULAIRE //////////////////////////////////*/
+    /* Nous ajustons les paramètre de formulaire pour sa taille et positionnement selon la taille d'écran. */
+    .formulaire {
+        margin-left: 1%;
+        margin-top: -170%;
+    }
+    #form {
+        height: 500px;
+    }
+    /*////////////////////// FIGURES ////////////////////////*/
+    /* Nous réduisons encore la taille des image pour qu'il soit l'un à côté de l'autre. */
+    figure {
+        display: inline-block;
+        width: 24.6%;
+    }
+
+    /*////////////////// SECTION SLIDESHOW ////////////*/
+    /* Nous réduisons une dernière fois la taille du slideshow en fonction de la taille des images. */
+    #slideshow {
+        height: 220px;
+    }
+
+   /*/////////////////////LOGO ///////////////*/
+    /* Nous ajustons la hauteur du logo pour le centre sur le menu. */
+    a#logo {
+        margin-top: 5%;
+    }
+}
+.fas {
+    border: 3px solid #24aeb5;
+    border-radius: 50px;
+    height: 75px;
+    width: 75px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: #24aeb5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+li {
+    list-style: none;
+}
+
+/*for ie */
+
+.control__input {
+    display: none;
+}
+
+/*==================================
+=            NAVIGATION            =
+==================================*/
+
+.navigation__input:checked ~ .navigation__hamburger > .navigation__hamburger__icon {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.navigation__input:checked ~ .navigation__hamburger > .navigation__hamburger__icon:nth-last-child(2) {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+    -ms-transform: rotate(0deg) scale(0.2, 0.2);
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.navigation__input:checked ~ .navigation__hamburger > .navigation__hamburger__icon:last-child {
+    opacity: 1;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.navigation__input:checked ~ .navigation__menu--header {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+#portfolio-menu-item-1:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--1,
+#portfolio-menu-item-2:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--2,
+#portfolio-menu-item-3:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--3,
+#portfolio-menu-item-4:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--4 {
+    border: none;
+}
+
+#portfolio-menu-item-1:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--1,
+#portfolio-menu-item-2:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--2,
+#portfolio-menu-item-3:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--3,
+#portfolio-menu-item-4:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--4 {
+    color: #FFF;
+}
+
+#portfolio-menu-item-1:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--1,
+#portfolio-menu-item-2:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--2,
+#portfolio-menu-item-3:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--3,
+#portfolio-menu-item-4:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__label--4 {
+    background-color: #24aeb5;
+}
+
+@media screen and (min-width: 768px) {
+    #portfolio-menu-item-1:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__icon--1,
+    #portfolio-menu-item-2:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__icon--2,
+    #portfolio-menu-item-3:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__icon--3,
+    #portfolio-menu-item-4:checked ~ .navigation .navigation__menu--portfolio .navigation__menu__item--portfolio .navigation__menu__icon--4 {
+        display: block;
+        
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    #portfolio-menu-item-1:checked ~ .slider--all,
+    #portfolio-menu-item-2:checked ~ .slider--creations,
+    #portfolio-menu-item-3:checked ~ .slider--mockup,
+    #portfolio-menu-item-4:checked ~ .slider--logo {
+        display: block;
+        
+    }
+    
+     #portfolio ul li {
+	height:65px;
+}
+    #portfolio li:hover{
+	height: 65px;
+}
+}
+
+@media screen and (min-width: 1025px) {
+    .navigation__menu__link:hover {
+        margin-top: -3px;
+        border-top: 3px solid #5CADD3;
+        color: #FFF;
+    }
+}
+
+/*=============================
+=            SLIDE            =
+=============================*/
+
+@media screen and (min-width: 1025px) {
+    .slide--all:hover > .slide__caption {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    #portfolio-menu-item-2:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(3),
+    #portfolio-menu-item-2:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(4),
+    #portfolio-menu-item-2:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(5),
+    #portfolio-menu-item-2:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(7),
+    #portfolio-menu-item-2:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(8) {
+        display: none;
+    }
+    #portfolio-menu-item-3:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(1),
+    #portfolio-menu-item-3:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(2),
+    #portfolio-menu-item-3:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(3),
+    #portfolio-menu-item-3:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(6),
+    #portfolio-menu-item-3:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(7) {
+        display: none;
+    }
+    #portfolio-menu-item-4:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(1),
+    #portfolio-menu-item-4:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(2),
+    #portfolio-menu-item-4:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(4),
+    #portfolio-menu-item-4:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(5),
+    #portfolio-menu-item-4:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(6),
+    #portfolio-menu-item-4:checked ~ .slider--all .slider__inner--all .slide--all:nth-child(8) {
+        display: none;
+    }
+}
+
+/* NAVIGATION PORTFOLIO */
+
+.navigation__menu--portfolio {
+    width: 100%;
+    margin: 50px 0;
+    border-radius: 5px;
+    background-color: lightgray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.navigation__menu__item--portfolio {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.navigation__menu__label {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.navigation__menu__icon {
+    display: none;
+    position: absolute;
+    bottom: -18px;
+    height: 32px;
+    left: 50%;
+
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+.navigation__menu__label--1,
+.navigation__menu__label--2,
+.navigation__menu__label--3 {
+    border-bottom: 1px solid rgba(145, 147, 151, 0.3);
+}
+
+.navigation__menu__label--1 {
+    border-radius: 5px 5px 0 0;
+}
+
+.navigation__menu__label--4 {
+    border-radius: 0 0 5px 5px;
+}
+
+
+/*  NAVIGATION HAMBURGER  */
+
+.navigation__hamburger {
+    position: relative;
+}
+
+.navigation__hamburger__control {
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    cursor: pointer;
+
+    opacity: 0;
+    z-index: 2;
+}
+
+.navigation__hamburger__icon {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin: 5px 0;
+    border-radius: 3px;
+    z-index: 1;
+
+    -webkit-transform-origin: 4px 0px;
+    -ms-transform-origin: 4px 0px;
+    transform-origin: 4px 0px;
+
+    -webkit-transition: background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.2s ease,
+    -webkit-transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+    transition: background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.2s ease,
+    -webkit-transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+    -o-transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.2s ease;
+
+    transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.2s ease;
+
+    transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.2s ease,
+    -webkit-transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+}
+
+.navigation__hamburger__icon:first-child {
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+}
+
+.navigation__hamburger__icon:last-child {
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+}
+
+
+@media (max-width: 1024px) {
+
+    .navigation__menu--header {
+        -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition: -webkit-transform 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        -o-transition: transform 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition: transform 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition: transform 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000),
+        -webkit-transform 0.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+        -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navigation__menu--portfolio {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .navigation__menu__item--portfolio {
+        height: 50px;
+        width: 25%;
+        background-color: lightgray;
+        
+    }
+    .navigation__menu__label {
+        line-height: 50px;
+    }
+    .navigation__menu__label--1 {
+        border-radius: 5px 0 0 5px;
+    }
+    .navigation__menu__label--4 {
+        border-radius: 0 5px 5px 0;
+    }
+    .navigation__menu__label--1,
+    .navigation__menu__label--2,
+    .navigation__menu__label--3 {
+        border-bottom: none;
+    }
+    
+}
+
+@media screen and (min-width: 1025px) {
+    .navigation__hamburger {
+        display: none;
+    }
+    .navigation__menu--header {
+        position: static;
+        width: 425px;
+        height: 80px;
+    }
+    .navigation__menu--portfolio {
+        width: 98%;
+        margin: 50px auto;
+    }
+    .navigation__menu__item {
+        height: 80px;
+    }
+    .navigation__menu__link {
+        line-height: 80px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navigation__menu--portfolio {
+        width: 60%;
+    }
+}
+
+
+/*===================================
+=            HOME-MOBILE            =
+===================================*/
+
+.home-mobile {
+    width: 100%;
+}
+
+/* Title */
+
+.home-mobile__title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.home-mobile__title__strong {
+    font-size: 2.5rem;
+    color: #5CADD3;
+}
+
+/* Items */
+
+.home-mobile__items {
+    width: 100%;
+    margin: auto;
+}
+
+/* item */
+
+.home-mobile__item {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.home-mobile__item__info {
+    font-size: 1rem;
+}
+
+.home-mobile__item__button {
+    display: block;
+    width: 35%;
+    height: 40px;
+    line-height: 40px;
+    margin: 15px auto;
+    border-radius: 5px;
+    background-color: #5CADD3;
+    color: #FFF;
+}
+
+@media screen and (min-width: 768px) {
+    .home-mobile__title__strong {
+        font-size: 4rem;
+    }
+    .home-mobile__title {
+        font-size: 2rem;
+    }
+    .home-mobile__item__info {
+        font-size: 1.5rem;
+    }
+    .home-mobile__item__button {
+        width: 55%;
+        font-size: 1rem;
+    }
+    .home-mobile__items {
+        width: 100%;
+
+        -webkit-animation: none;
+        animation: none;
+    }
+    .home-mobile__item {
+        float: left;
+
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+
+        padding: 30px;
+        width: 50%;
+    }
+    .home-mobile__item__info {
+        margin: 0;
+        text-align: center;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .home-mobile__item__info {
+        font-size: 1.4rem;
+    }
+}
+
+/*=======================================
+=            SECTION-SUMMARY            =
+=======================================*/
+
+.section-summary {
+    text-align: center;
+    padding-top: 10px
+}
+
+/* Title */
+
+.section-summary__title {
+    font-size: 2rem;
+}
+
+/* Line */
+
+.section-summary__line {
+    position: relative;
+    margin: 20px auto;
+    width: 150px;
+    height: 1px;
+    background-color: #24aeb5;
+}
+
+.section-summary__line__icon {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 50%;
+    bottom: -8px;
+    border: 0px solid #24aeb5;
+    border-radius: 50%;
+    background-color: #24aeb5;
+
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* for ie */
+    background-clip: content-box;
+}
+
+.section-summary__line__icon--portfolio {
+    border: 0px solid #24aeb5;
+}
+
+/* Info */
+
+.section-summary__info {
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .section-summary__title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section-summary {
+        width: 50%;
+        margin: auto;
+        padding-top: 25px;
+        margin-top: 50px;
+    }
+    .section-summary--contact {
+        display: none;
+    }
+}
+
+/*===============================
+=            SERVICE            =
+===============================*/
+
+.service {
+    margin-top: 50px;
+}
+
+/*==============================
+=            SLIDER            =
+==============================*/
+
+.slider {
+    width: 100%;
+    display: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Border for fix the bad rounding percentage of the images while resizing viewport width */
+
+.slider__inner--all {
+    width: 120%;
+}
+
+.slider__inner--creations {
+    width: 300%;
+}
+
+.slider__inner--mockup {
+    width: 300%;
+}
+
+.slider__inner--logo {
+    width: 200%;
+}
+
+.slider__timeline {
+    display: none;
+}
+
+
+/* SLIDER CONTROL */
+
+.slider__control {
+    position: absolute;
+    z-index: 49;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+
+.slider__control__label {
+    display: none;
+    width: 10%;
+    height: 100%;
+    opacity: 0.6;
+    cursor: pointer;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    -webkit-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+
+    .slider__inner {
+        -webkit-transition: -webkit-transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition: -webkit-transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        -o-transition: transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition: transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition: transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000), -webkit-transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+        -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .slider__control {
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .slider--all {
+        display: block;
+    }
+    .slider__inner--all {
+        width: 100%;
+    }
+    .slider__border {
+        display: none;
+    }
+    .slider__control {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .slider__timeline {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: -50%;
+        width: 100%;
+        height: 5px;
+        background-color: #5CADD3;
+    }
+    .slider--home {
+        display: block;
+        height: 100%;
+        padding: 0;
+
+        /* Remove the border of the portfolio sliders */
+        border: none;
+    }
+    .slider__inner--home {
+        width: 200%;
+        height: 100%;
+    }
+    .slider__control {
+        display: none;
+    }
+    .slider__control--home {
+        display: block;
+        height: 80px;
+        bottom: 50%;
+
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        transform: translateY(50%);
+    }
+    .slider__control__label--home {
+        height: 80px;
+        width: 40px;
+    }
+    .slider__timeline,
+    .slider__inner--home {
+        -webkit-transition: -webkit-transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition: -webkit-transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        -o-transition: transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition: transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition: transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000), -webkit-transform 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+        -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    }
+}
+
+/*=============================
+=            SLIDE            =
+=============================*/
+
+.slide {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.slide--home {
+    width: 50%;
+}
+
+.slide--all {
+    width: 12.5%;
+}
+
+.slide--creations,
+.slide--mockup {
+    width: 33.33%;
+}
+
+.slide--logo {
+    width: 50%;
+}
+
+.slide__image {
+    width: 100%;
+    height: auto;
+}
+
+/* CAPTION */
+
+.slide__caption {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.slide__caption__info-container {
+    width: 80%;
+    text-align: center;
+}
+
+.slide__caption__title {
+    font-size: 1.2rem;
+}
+
+.slide__caption__info {
+    font-size: 1rem;
+    margin-top: -15px;
+}
+
+.slide__caption__info-container {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.slide__caption__icon-container {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .slide__caption {
+        height: 80px;
+    }
+    .slide__caption__title {
+        font-size: .8rem;
+         text-transform: uppercase;
+    }
+    .slide__caption__info {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+    .slide__image {
+        padding-bottom: 0;
+    }
+    .slide--all {
+        margin: 1%;
+        width: 23%;
+    }
+    .slide__caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 35%;
+        display: none;
+
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .slide__caption__info-container {
+        width: 80%;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .slide__caption__title {
+        font-size: 1vw;
+    }
+    .slide__caption__info {
+        font-size: 1vw;
+    }
+    .slide__caption__icon-container {
+        position: relative;
+        top: -25px;
+        right: 10px;
+        display: block;
+        height: 50px;
+        width: 50px;
+        min-width: 50px;
+        background-color: #24aeb5;
+        border: 2px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .slide__caption__label {
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        cursor: pointer;
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .slide__caption__icon {
+        color: #FFF;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .slide__caption__title {
+        font-size: 1vw;
+    }
+    .slide__caption__info {
+        font-size: 0.8vw;
+    }
+    .slide--home {
+        height: 100%;
+    }
+    .slide--all {
+        margin: 1%;
+        width: 23%;
+    }
+    .slide__bg {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .slide__bg--1 {
+        background-image: url(webagency_images/images/home/bg1.jpg);
+    }
+    .slide__bg--2 {
+        background-image: url(webagency_images/images/home/bg2.jpg);
+    }
+
+    /* CAPTION HOME */
+    .slide__caption--home {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        width: 45%;
+        color: #FFF;
+
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .slide__caption__info--home {
+        font-size: 1.5rem;
+        margin: 25px 0 35px 0;
+    }
+
+    .slide__caption__title--home,
+    .slide__caption__subtitle--home {
+        font-size: 2.8rem;
+    }
+
+    .slide__caption__button--home {
+        text-align: center;
+        display: block;
+        line-height: 50px;
+        height: 50px;
+        width: 200px;
+        font-size: 1.2rem;
+        color: #FFF;
+        background-color: #5CADD3;
+        border-radius: 5px;
+    }
+
+    .slide__caption__title__strong {
+        color: #4EA4B9;
+    }
+}
+
+/*================================
+=            LIGHTBOX            =
+================================*/
+
+.lightbox {
+    display: none;
+}
+
+/* Keyframes block is define outside the media querie due to a bug on Internet Explorer 10/11 */
+
+@-webkit-keyframes fadeInScale {
+    0% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .lightbox {
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .lightbox__image-container {
+        position: relative;
+
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+
+        -webkit-animation: fadeInScale 0.5s ease-in-out;
+        animation: fadeInScale 0.5s ease-in-out;
+    }
+
+    .lightbox__label {
+        position: absolute;
+        top: -60px;
+        right: -48px;
+        cursor: pointer;
+    }
+    .lightbox__icon {
+        color: #FFF;
+    }
+    .lightbox__image {
+        width: 750px;
+        height: 500px;
+    }
+}
+
+/*=================================
+=            PORTFOLIO            =
+=================================*/
+
+.l-portfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+}
+
+.l-portfolio__container {
+    width: 90%;
+    margin: auto;
+    background-color: lightgray;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+
+@media screen and (min-width: 1200px) {
+    
+}
+
+.navigation {
+    background-color: lightgray;
+}
+
+
+
+.navigation__menu__label--1 {
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: 50px;
+}
+@media screen and (min-width: 750px) {
+    .slide {
+        width: 23%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .slide--all {
+        width: 100%;
+    }
+    .slider__inner--all {
+    width: 95%;
+    }
+    .navigation__menu__label--1 {
+    padding-left: 30px;
+}
+    .slider--all {
+        margin-top: 200px;
+    }
+    .slider--logo {
+        margin-top: 200px;
+    }
+    .slider--mockup {
+        margin-top: 200px;
+    }
+    .slider--creations {
+        margin-top: 200px;
+    }
+}
+@media screen and (min-width: 750px) {
+    .slider__inner--mockup {
+    width: 100%;
+}
+    .slider__inner--creations {
+    width: 100%;
+}
+}

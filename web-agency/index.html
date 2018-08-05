@@ -1,0 +1,827 @@
+<!-- Nous donnons un type html au document. -->
+<!DOCTYPE html>
+<!-- Nous choisissons la langue française pour les accentuations et caractères spéciaux. -->
+<html lang="fr">
+<!-- Nous ouvrons le header qui contient les liens de feuilles css, le méta, etc. -->
+
+<head>
+    <!-- Nous prenons le meta charset utf -8 pour les caractères et accentuations latin. -->
+    <meta charset="UTF-8">
+    <meta name="Content-Type" content="UTF-8">
+    <meta name="Content-Language" content="fr">
+    <meta name="Description" content="Agence web proposent des services de conception et réalisation de projets web avec leur spécialité sur l'
+UX DESIGN, Ui DESIGN et le référencement SEO.
+Site web, intranet, application mobile font partit des projets réaliser">
+    <meta name="Keywords" content="Agence web, UX DESIGN, UI DESIGN , HTML, CSS, e-marketing, le référencement naturel,">
+    <meta name="Subject" content="Agence web">
+    <meta name="Copyright" content="WebAgency">
+    <meta name="Author" content="yoann delaloy">
+    <meta name="Publisher" content="Orange">
+    <meta name="Identifier-Url" content="http://yoann-delaloy.pagesperso-orange.fr/">
+    <meta name="Revisit-After" content="1 day">
+    <meta name="Robots" content="all">
+    <meta name="Rating" content="general">
+    <meta name="Distribution" content="global">
+    <meta name="Geography" content="Paris">
+    <meta name="Category" content="internet">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="WebAgency" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://yoann-delaloy.pagesperso-orange.fr/">
+    <meta property="og:image" content=https://image.ibb.co/hWygQS/150.jpg/>
+    <meta property="og:description" content="Agence web proposent des services de conception et réalisation de projets web avec leur spécialité sur l'
+UX DESIGN, Ui DESIGN et le référencement SEO.
+Site web, intranet, application mobile font partit des projets réaliser" />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@publisher_handle">
+    <meta name="twitter:title" content="WebAgency">
+    <meta name="twitter:description" content="Agence web proposent des services de conception et réalisation de projets web avec leur spécialité sur l'
+UX DESIGN, Ui DESIGN et le référencement SEO.
+Site web, intranet, application mobile font partit des projets réaliser">
+    <meta name="twitter:creator" content="@author_handle">
+    <!-- Twitter Summary card images must be at least 200x200px -->
+    <meta name="twitter:image" content=https://image.ibb.co/hWygQS/150.jpg>
+
+    <!-- Nous rentrons le meta viewport qui permet de contrôler le responsive design. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta de compatibilité Internet Explorer et Microsoft Edge. -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Titre de la page. -->
+    <title> WebAgency </title>
+    <!-- Link qui contient le favicon de la page. -->
+    <link rel="icon" href="webagency_images/logo.ico" />
+    <!-- Link qui gère la police via Google Fonts. -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+    <!-- Link qui permet de gérer les polices via fontawesome. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- Link qui introduit la feuille css du style de la page. -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Nous débutons avec un header qui contient, une div avec le logo en background sur la gauche. 
+Il comprend 8/12 de la largeur alors que la div qui contient notre menu responsive est situé sur les 4/12 de la droite.
+Nous constatons que le menu à des boutons qui s'activent lorsqu'il sont activés grâce au   : active mais ils ont également leur bordures hautes qui s'activent quand l'on passe dessus grâce à :hover. -->
+
+    <header class="menuHeader">
+        <!-- Nous introduisons le logo du site qui contient le nom de l'agence, il est entouré d'un lien ce qui le rend cliquable pour revenir au début de la page comme tout les sites. -->
+        <a href="#" id="logo"><img src="webagency_images/images/logo.png" alt=""></a>
+        <!-- Nous ouvrons le menu de navigation. -->
+        <nav class="navMenu">
+            <!-- Voici l'icône menu "burger" qui permet de ranger le menu sur les petits écrans. Les div permettent de produire les 3 traits horizontaux. -->
+            <a href="#" id="menu-icon">
+                <div class="burger"></div>
+                <div class="burger"></div>
+                <div class="burger"></div>
+            </a>
+            <!-- Nous ouvrons à présent le menu de navigation en question au sein d'une liste désordonnée. -->
+            <ul>
+                <!-- Nous introduisons les puces de la liste avec les balises li. elles contiennent chacune un lien qui  contiennent eux-mêmes une ancre qui vise chaque catégories du site et donc du menu. -->
+                <li class="lbtn"><a class="btn current" href="#slideshow" id="btn1">Accueil</a></li>
+                <li class="lbtn"><a href="#service" class="btn" id="btn2">Nos services</a></li>
+                <li class="lbtn"><a href="#portfolio" class="btn" id="btn3">Nos projets</a></li>
+                <li class="lbtn"><a href="#contact" class="btn" id="btn4">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Les sélecteurs sont assez spéciaux : .sl_command:target ~ #slideshow .slider permet de cibler « L’élément .slider fils de #slideshow lorsque ce dernier est indirectement frère de .sl_command, uniquement lorsque ce dernier est ciblé. ». Autrement dit : si .sl_command est ciblé, alors on va chercher le frère #slideshow puis son fils .slider pour lui appliquer un stop.
+On procède de la même manière pour les autres éléments (figcaption, #timeline et .dots_commands que nous verrons plus tard dans le bonux) qui ont une animation en route également. -->
+
+    <span id="sl_play" class="sl_command">&nbsp;</span>
+    <span id="sl_pause" class="sl_command">&nbsp;</span>
+    <span id="sl_i1" class="sl_command sl_i">&nbsp;</span>
+    <span id="sl_i2" class="sl_command sl_i">&nbsp;</span>
+    <span id="sl_i3" class="sl_command sl_i">&nbsp;</span>
+    <span id="sl_i4" class="sl_command sl_i">&nbsp;</span>
+
+    <!-- On ouvre une section pour les sliders. -->
+    <section id="slideshow">
+        <!-- Ces liens et paragraphes représentent les boutons précédents de la première slide donc ne bouge pas. -->
+
+        <!-- Ce lien représente le précédent de la première slide. -->
+        <a class="commands prev commands1" href="#sl_i4" title="Go to last slide">
+            <p class="fleche" id="fleche1">&lt;</p>
+        </a>
+        <!-- Ce lien représente le suivant de la première slide. -->
+        <a class="commands next commands1" href="#sl_i2" title="Go to 2nd slide">
+            <p id="fleche2">&gt;</p>
+        </a>
+        <!-- Ce lien représente le précedent de la seconde slide. -->
+        <a class="commands prev commands2" href="#sl_i1" title="Go to 1rst slide">
+            <p id="fleche3">&lt;</p>
+        </a>
+        <!-- Ce lien représente le précédent de la seconde slide. -->
+        <a class="commands next commands2" href="#sl_i3" title="Go to 3rd slide">
+            <p id="fleche4">&gt;</p>
+        </a>
+        <!-- Ce lien représente le suivant de la second slide. -->
+        <a class="commands prev commands3" href="#sl_i2" title="Go to 2nd slide">
+            <p id="fleche5">&lt;</p>
+        </a>
+        <!-- Ce lien représente le suivant de la troisième slide. -->
+
+        <a class="commands next commands3" href="#sl_i4" title="Go to 4th slide">
+            <p id="fleche6">&gt;</p>
+        </a>
+        <!-- Ce lien représente le précédent de la quatrième slide. -->
+        <a class="commands prev commands4" href="#sl_i3" title="Go to 3rd slide">
+            <p id="fleche7">&lt;</p>
+        </a>
+        <!-- Ce lien représente le suivant de la quatrième slide. -->
+        <a class="commands next commands4" href="#sl_i1" title="Go to first slide">
+            <p id="fleche8">&gt;</p>
+        </a>
+        <!-- Nous rentrons à cette endroit les commandes play et pause . Ce qui nous permet de relance mes slides automatique si on le souhaite. -->
+        <!-- Nous commençons par introduire la commande play ...  -->
+        <a class="play_commands pause" href="#sl_pause" title="Maintain paused">Pause</a>
+        <a class="play_commands play" href="#sl_play" title="Play the animation">Play</a>
+        <!-- On ouvre un container qui enveloppe les sliders.  -->
+        <div class="container">
+            <!-- Nous ouvrons un premier bloc qui contient la totalité du slider automatique. -->
+            <div class="c_slider">
+                <!-- Nous ouvrons cette fois-çi, le bloc qui contient la légende, de la slide qui est positionnée à gauche (la première). -->
+                <div class="legendes">
+                    <div class="legende1">
+                        <!-- Nous introduisons un titre à notre légende. -->
+                        <h1 class="titreleg"> L'AGENCE DE TOUS VOS PROJETS</h1>
+                        <!-- Ainsi qu'un paragraphe. -->
+                        <p class="para">Vous avez 1 projet web ? La WebAgency vous aide à le réaliser</p>
+                        <!-- Et enfin un bouton avec une ancre qui renvoi à l'endroit désiré. -->
+                        <a href="https://www.google.fr/" class="lienSlide" target="_blank">Plus d'infos</a>
+                    </div>
+                    <!-- Nous ouvrons cette fois-çi, le bloc qui contient la légende de la slide qui est positionné à droite (la seconde). -->
+                    <div id="legende2">
+                        <h1 class="titreleg"> L'AGENCE DE TOUS VOS PROJETS</h1>
+                        <p class="para">Vous avez 2 projets web ?<br> La WebAgency vous aide à le réaliser</p>
+                        <a href="https://www.google.fr/" class="lienSlide" target="_blank">Plus d'infos</a>
+                    </div>
+                    <!-- Nous retrouvons ici la légende de la troisième slide. -->
+                    <div class="legende3">
+                        <h1 class="titreleg"> L'AGENCE DE TOUS VOS PROJETS</h1>
+                        <p class="para">Vous avez 3 projets web ?<br> La WebAgency vous aide à le réaliser</p>
+                        <a href="https://www.google.fr/" class="lienSlide" target="_blank">Plus d'infos</a>
+                    </div>
+                    <!-- Nous retrouvons ici la légende de la quatrième slide.  -->
+                    <div class="legende4 ">
+                        <h1 class="titreleg"> L'AGENCE DE TOUS VOS PROJETS</h1>
+                        <p class="para">Vous avez 4 projets web ?<br> La WebAgency vous aide à le réaliser</p>
+                        <a href="https://www.google.fr/" class="lienSlide" target="_blank">Plus d'infos</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Nous ouvrons un second bloc qui contient la totalité du slider manuel. -->
+            <div id="slider">
+                <!--  Nous ouvrons cette fois-çi le bloc qui contient l'image et la légende de la slide qui est positionnée à gauche (la première). -->
+                <figure>
+                    <!-- Nous insérons la première image qui se situe à gauche du slider. -->
+                    <img src="webagency_images/images/slider/bg1.jpg" alt="" />
+                    <!-- Nous rentrons dans le bloc de la légende de la première image. -->
+                    <div class="legende">
+                        <h1 class="titreleg"> L'AGENCE DE TOUS VOS PROJETS</h1>
+                        <p class="para">Vous avez un projet web ?<br> La WebAgency vous aide à le réaliser</p>
+
+                        <a href="https://www.google.fr/" class="lienSlide" target="_blank">Plus d'infos</a>
+                    </div>
+                </figure>
+                <!-- Nous effectuons les mêmes actions pour la seconde image du slider manuel. -->
+                <figure>
+                    <!-- Nous insérons la première image qui se situe à gauche du slide. -->
+                    <img src="webagency_images/images/slider/bg2.jpg" alt="v" />
+                    <!-- Nous rentrons dans le bloc de la légende de la seconde image. -->
+                    <div class="legende">
+                        <h1 class="titreleg"> L'AGENCE DE TOUS VOS PROJETS</h1>
+                        <p class="para">Vous avez un projet web ?<br> La WebAgency vous aide à le réaliser</p>
+                        <a href="https://www.google.fr/" class="lienSlide" target="_blank">Plus d'infos</a>
+                    </div>
+                </figure>
+                <!-- Nous retrouvons ici la légende de la troisième slide.  -->
+                <figure>
+                    <img src="webagency_images/images/slider/bg1.jpg" alt="" />
+                    <div class="legende">
+                        <h1 class="titreleg"> L'AGENCE DE TOUS VOS PROJETS</h1>
+                        <p class="para">Vous avez un projet web ?<br> La WebAgency vous aide à le réaliser</p>
+                        <a href="https://www.google.fr/" class="lienSlide" target="_blank">Plus d'infos</a>
+                    </div>
+                </figure>
+                <!-- Nous retrouvons ici la légende de la quatrième slide.  -->
+                <figure>
+                    <img src="webagency_images/images/slider/bg2.jpg" alt="" />
+                    <div class="legende">
+                        <h1 class="titreleg"> L'AGENCE DE TOUS VOS PROJETS</h1>
+                        <p class="para">Vous avez un projet web ?<br> La WebAgency vous aide à le réaliser</p>
+                        <a href="https://www.google.fr/" class="lienSlide" target="_blank">Plus d'infos</a>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cette seconde partie et première section contiennent les services et se divisent en 2 parties dont la seconde partie qui se divise elle même en deux autres parties plus petites. La première partie haute contient le titre ainsi que le saut de ligne hr qui représente un point bleu et deux traits gris sur le côté ainsi qu'un petit paragraphe de présentation. Sur la deuxième partie il est représenté une image d'un écran qui présente les services et enfin les différents services. Nous remarquons qu'il y a une div pour l'image se trouvant sur la gauche et une autre ou se trouve les différents services sur la droite. -->
+    <section class="sectionService" id="service">
+        <!-- Partie haute de la section. -->
+        <div class="hautService">
+            <!--titre des servise-->
+            <h2 class="titreService" id="nosServices"><strong>NOS SERVICES</strong></h2>
+            <!--Trait gris sur les côtés. -->
+            <div class="section-summary__line section-summary__line--portfolio">
+                    <div class="section-summary__line__icon section-summary__line__icon--portfolio"></div>
+                </div>
+            
+            <!-- Point bleu qui vient se mettre au milieu des traits gris. -->
+            
+            <!-- Paragraphe de présentation des services.  -->
+            <p class="paraService" id="acrocheService"><strong>WebAgency</strong> est une agence digitale technologique atypique : à la fois <strong>agence web</strong>, agence <strong>e-marketing</strong>strong> et <strong>SSII/ESN</strong>. Cette maîtrise technologique nous permet de réaliser des <strong>sites web, des applis mobiles et métiers</strong> sur mesure et d'intégrer les principales solutions technologiques du marché. Un seul partenaire pour plus de réactivité et de cohérence, une vision globale, des coûts et des délais maîtrisés.<br><br><br><br> De taille humaine et réactive, l'agence est composée d'<strong>experts</strong> qui imaginent et conçoivent avec vous votre projet. Vous êtes <strong>conseillé</strong> et <strong>accompagné</strong> du début à la fin. Notre valeur ajoutée : écouter, échanger, comprendre, analyser, être force de proposition, penser digital et multicanal mais aussi et surtout optimiser l'<strong>expérience utilisateur</strong> pour tirer le meilleur potentiel de chaque support, qu'il soit <strong>web</strong> ou <strong>mobile</strong>.</p>
+        </div>
+
+        <!-- Partie basse de la section service. -->
+        <div class="basService">
+            <!-- Ici nous retrouvons dans un bloc qui se trouve a gauche une image responsive. -->
+            <div class="imageService">
+                <!-- Voici l'image en question. -->
+                <img src="webagency_images/images/main-feature.png" alt="ecran1" class="responsive1">
+            </div>
+            <!-- Partie droite du bloc qui se divise en plusieur petit bloc qui présente les service. -->
+            <div class="bloqueService">
+                <!--Voici le premier petit bloc qui contient un service. Il comprend une image, un paragraphe qui fait ressortir le point bleu sur la bordure de l'image, un titre h3 et un dernier paragraphe qui présente le service proposé. -->
+                <div class="UXdesign">
+                    <!-- Fontawesome correspondant à l'icône sur la gauche du texte. -->
+                    <i class="fas fa-chart-line fa-3x"></i>
+                    <!-- Paragraphe qui représente le point bleu qui se trouve sur la bordure de l'image. -->
+                    <p class="serv"></p>
+                    <!--Titre du service. -->
+                    <h3 class="nomService">UX design</h3>
+                    <!-- Présentation du service. -->
+                    <p class="paraService servises">Nous privilégions une approche <strong>centrée sur l'utilisateur</strong>. Nous étudions avec vous votre projet pour cibler vos besoins et le rendre accessible, ergonomique, et adaptatif (<strong>Responsive Web Design</strong>), afin d'affirmer votre présence sur tous les supports (ordinateur, tablette, smartphone)</p>
+                </div>
+                <!-- Nous ouvrons à cette endroit le bloc qui contient le titre et le premier paragraphe qui correspond aux premier service présenter. -->
+                <div class="UIdesign">
+                    <!-- Fontawesome correspondant à l'icône sur la gauche du texte. -->
+                    <i class="fas fa-cubes fa-3x"></i>
+                    <!-- Paragraphe qui représente le point bleu qui se trouve sur la bordure de l'image. -->
+                    <p class="serv"></p>
+                    <!-- Titre du service. -->
+                    <h3 class="nomService">UI design</h3>
+                    <!-- Présentation du service. -->
+                    <p class="paraService servises">Nous créons <strong>l'identité visuelle</strong> de votre projet sur-mesure. Nous mettons en place selon vos souhaits une charte graphique pratique et intuitive de qualité, dans l'esprit de votre entreprise.</p>
+                </div>
+                <!-- Nous ouvrons à cette endroit le bloc qui contient le titre et le seconde paragraphe qui correspond aux second service présenté. -->
+                <div class="SEO">
+                    <!--Fontawesome correspondant à l'icône sur la gauche du texte. -->
+                    <i class="fas fa-chart-pie fa-3x"></i>
+                    <!--Paragraphe qui représente le point bleu qui se trouve sur la bordure de l'image. -->
+                    <p class="serv"></p>
+                    <!--Titre du service. -->
+                    <h3 class="nomService" id="titreSEO">SEO</h3>
+                    <!--Présentation du service. -->
+                    <p class="paraService servises">Nous optimisons <strong>la visibilité</strong> de votre site auprès des internautes sur les recherches en rapport avec vos produits et services par <strong>le référencement naturel</strong>. Vous allez être populaire !</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Au sein de cette section nous retrouvons les projets de l'agence à travers une galerie d'image qui est précédée par un titre et un petit paragraphe et dirigée par 4 boutons qui font sortir chacun une galerie de 8 images positionnées de façon responsive, les images comprennent une légende et un icône oeil en plus d'être cliquable pour les agrandir. -->
+    <!-- Portfolio -->
+    <section class="l-portfolio" id="portfolio">
+
+        <div class="l-portfolio__container">
+
+            <!-- Section summary -->
+            <div class="section-summary">
+                <h2 class="section-summary__title">NOS PROJETS</h2>
+                <div class="section-summary__line section-summary__line--portfolio">
+                    <div class="section-summary__line__icon section-summary__line__icon--portfolio"></div>
+                </div>
+                <p class="section-summary__info">Vous voulez voir de quoi notre agence de communication web est capables et vous avez raison ! Voici quelques une de nos réalisations</p>
+            </div>
+
+            <input class="control__input" type="radio" name="portfolio-menu-control" id="portfolio-menu-item-1" checked />
+            <input class="control__input" type="radio" name="portfolio-menu-control" id="portfolio-menu-item-2" />
+            <input class="control__input" type="radio" name="portfolio-menu-control" id="portfolio-menu-item-3" />
+            <input class="control__input" type="radio" name="portfolio-menu-control" id="portfolio-menu-item-4" />
+
+            <!-- Portfolio menu -->
+            <nav class="navigation">
+
+                <ul class="navigation__menu--portfolio">
+
+                    <li class="nxavigation__menu__item--portfolio">
+                        <label class="navigation__menu__label navigation__menu__label--1" for="portfolio-menu-item-1">Projets</label>
+                        <i class="navigation__menu__icon navigation__menu__icon--1 fa fa-2x fa-caret-down" aria-hidden="true"></i>
+                    </li>
+                    <li class="navigation__menu__item--portfolio">
+                        <label class="navigation__menu__label navigation__menu__label--2" for="portfolio-menu-item-2">Creations</label>
+                        <i class="navigation__menu__icon navigation__menu__icon--2 fa fa-2x fa-caret-down" aria-hidden="true"></i>
+                    </li>
+                    <li class="navigation__menu__item--portfolio">
+                        <label class="navigation__menu__label navigation__menu__label--3" for="portfolio-menu-item-3">Maquettes</label>
+                        <i class="navigation__menu__icon navigation__menu__icon--3 fa fa-2x fa-caret-down" aria-hidden="true"></i>
+                    </li>
+                    <li class="navigation__menu__item--portfolio">
+                        <label class="navigation__menu__label navigation__menu__label--4" for="portfolio-menu-item-4">Logos</label>
+                        <i class="navigation__menu__icon navigation__menu__icon--4 fa fa-2x fa-caret-down" aria-hidden="true"></i>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- All-slider -->
+            <div class="slider slider--all">
+
+                <!--Border for fix the bad rounding percentage of the images while resizing viewport width-->
+                <div class="slider__border"></div>
+
+                <input class="control__input" type="radio" name="all-slider-control" id="all-slide-1" checked />
+                <input class="control__input" type="radio" name="all-slider-control" id="all-slide-2" />
+                <input class="control__input" type="radio" name="all-slider-control" id="all-slide-3" />
+                <input class="control__input" type="radio" name="all-slider-control" id="all-slide-4" />
+                <input class="control__input" type="radio" name="all-slider-control" id="all-slide-5" />
+                <input class="control__input" type="radio" name="all-slider-control" id="all-slide-6" />
+                <input class="control__input" type="radio" name="all-slider-control" id="all-slide-7" />
+                <input class="control__input" type="radio" name="all-slider-control" id="all-slide-8" />
+
+                <div class="slider__inner slider__inner--all">
+
+                    <!-- Image 1 -->
+                    <figure class="slide slide--all">
+                        <input class="control__input" type="checkbox" id="all-slider-img-1" />
+
+                        <!--Lightbox Module-->
+                        <div class="lightbox">
+                            <div class="lightbox__image-container">
+                                <img class="lightbox__image" src="webagency_images/images/portfolio/01.jpg" alt="Dessin abtrait d'un visage avec des lunettes sur fond orange" />
+                                <label class="lightbox__label" for="all-slider-img-1">
+										<i class="lightbox__icon fa fa-3x fa-times" aria-hidden="true"></i>
+									</label>
+                            </div>
+                        </div>
+
+                        <img class="slide__image" src="webagency_images/images/portfolio/01.jpg" alt="Dessin abtrait d'un visage avec des lunettes sur fond orange" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">Philolog</h3>
+                                <p class="slide__caption__info"> Blog philosophique</p>
+                            </div>
+
+                            <div class="slide__caption__icon-container">
+                                <label class="slide__caption__label" for="all-slider-img-1">
+										<i class="slide__caption__icon fa fa-eye" aria-hidden="true"></i>
+									</label>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- Image 2 -->
+                    <figure class="slide slide--all">
+                        <input class="control__input" type="checkbox" id="all-slider-img-2" />
+
+                        <!--Lightbox Module-->
+                        <div class="lightbox">
+                            <div class="lightbox__image-container">
+                                <img class="lightbox__image" src="webagency_images/images/portfolio/02.jpg" alt="Dessin abtrait d'un lapin rose avec des lunettes tenant une bougie sur fond bleu" />
+                                <label class="lightbox__label" for="all-slider-img-2">
+										<i class="lightbox__icon fa fa-3x fa-times" aria-hidden="true"></i>
+									</label>
+                            </div>
+                        </div>
+
+                        <img class="slide__image" src="webagency_images/images/portfolio/02.jpg" alt="Dessin abtrait d'un lapin rose avec des lunettes tenant une bougie sur fond bleu" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">le canard enchaine</h3>
+                                <p class="slide__caption__info">Illustration presse</p>
+                            </div>
+
+                            <div class="slide__caption__icon-container">
+                                <label class="slide__caption__label" for="all-slider-img-2">
+										<i class="slide__caption__icon fa fa-eye" aria-hidden="true"></i>
+									</label>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- Image 3 -->
+                    <figure class="slide slide--all">
+                        <input class="control__input" type="checkbox" id="all-slider-img-3" />
+
+                        <!--Lightbox Module-->
+                        <div class="lightbox">
+                            <div class="lightbox__image-container">
+                                <img class="lightbox__image" src="webagency_images/images/portfolio/03.jpg" alt="Logo caligraphique d'une marque sur fond rouge" />
+                                <label class="lightbox__label" for="all-slider-img-3">
+										<i class="lightbox__icon fa fa-3x fa-times" aria-hidden="true"></i>
+									</label>
+                            </div>
+                        </div>
+
+                        <img class="slide__image" src="webagency_images/images/portfolio/03.jpg" alt="Logo caligraphique d'une marque sur fond rouge" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">pompadour</h3>
+                                <p class="slide__caption__info">Logo maroquinerie</p>
+                            </div>
+
+                            <div class="slide__caption__icon-container">
+                                <label class="slide__caption__label" for="all-slider-img-3">
+										<i class="slide__caption__icon fa fa-eye" aria-hidden="true"></i>
+									</label>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- Image 4 -->
+                    <figure class="slide slide--all">
+                        <input class="control__input" type="checkbox" id="all-slider-img-4" />
+
+                        <!--Lightbox Module-->
+                        <div class="lightbox">
+                            <div class="lightbox__image-container">
+                                <img class="lightbox__image" src="webagency_images/images/portfolio/04.jpg" alt="maquette d'un livre vu du dessus avec des inscriptions sur la couverture" />
+                                <label class="lightbox__label" for="all-slider-img-4">
+										<i class="lightbox__icon fa fa-3x fa-times" aria-hidden="true"></i>
+									</label>
+                            </div>
+                        </div>
+
+                        <img class="slide__image" src="webagency_images/images/portfolio/04.jpg" alt="maquette d'un livre vu du dessus avec des inscriptions sur la couverture" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">nathan</h3>
+                                <p class="slide__caption__info">Maquette librairie</p>
+                            </div>
+
+                            <div class="slide__caption__icon-container">
+                                <label class="slide__caption__label" for="all-slider-img-4">
+										<i class="slide__caption__icon fa fa-eye" aria-hidden="true"></i>
+									</label>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- Image 5 -->
+                    <figure class="slide slide--all">
+                        <input class="control__input" type="checkbox" id="all-slider-img-5" />
+
+                        <!--Lightbox Module-->
+                        <div class="lightbox">
+                            <div class="lightbox__image-container">
+                                <img class="lightbox__image" src="webagency_images/images/portfolio/05.jpg" alt="maquette de sac en papier avec le logo d'une marque inscrit dessus" />
+                                <label class="lightbox__label" for="all-slider-img-5">
+										<i class="lightbox__icon fa fa-3x fa-times" aria-hidden="true"></i>
+									</label>
+                            </div>
+                        </div>
+
+                        <img class="slide__image" src="webagency_images/images/portfolio/05.jpg" alt="maquette de sac en papier avec le logo d'une marque inscrit dessus" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">ptitmarche</h3>
+                                <p class="slide__caption__info">enseing de vente</p>
+                            </div>
+
+                            <div class="slide__caption__icon-container">
+                                <label class="slide__caption__label" for="all-slider-img-5">
+										<i class="slide__caption__icon fa fa-eye" aria-hidden="true"></i>
+									</label>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- Image 6 -->
+                    <figure class="slide slide--all">
+                        <input class="control__input" type="checkbox" id="all-slider-img-6" />
+
+                        <!--Lightbox Module-->
+                        <div class="lightbox">
+                            <div class="lightbox__image-container">
+                                <img class="lightbox__image" src="webagency_images/images/portfolio/06.jpg" alt="dessin abstrait d'une ville sur fond orange" />
+                                <label class="lightbox__label" for="all-slider-img-6">
+										<i class="lightbox__icon fa fa-3x fa-times" aria-hidden="true"></i>
+									</label>
+                            </div>
+                        </div>
+
+                        <img class="slide__image" src="webagency_images/images/portfolio/06.jpg" alt="dessin abstrait d'une ville sur fond orange" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">le monde</h3>
+                                <p class="slide__caption__info">resse</p>
+                            </div>
+
+                            <div class="slide__caption__icon-container">
+                                <label class="slide__caption__label" for="all-slider-img-6">
+										<i class="slide__caption__icon fa fa-eye" aria-hidden="true"></i>
+									</label>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- Image 7 -->
+                    <figure class="slide slide--all">
+                        <input class="control__input" type="checkbox" id="all-slider-img-7" />
+
+                        <!--Lightbox Module-->
+                        <div class="lightbox">
+                            <div class="lightbox__image-container">
+                                <img class="lightbox__image" src="webagency_images/images/portfolio/07.jpg" alt="logo d'une marque ressemblant à une fusé en train de décoller" />
+                                <label class="lightbox__label" for="all-slider-img-7">
+										<i class="lightbox__icon fa fa-3x fa-times" aria-hidden="true"></i>
+									</label>
+                            </div>
+                        </div>
+
+                        <img class="slide__image" src="webagency_images/images/portfolio/07.jpg" alt="logo d'une marque ressemblant à une fusé en train de décoller" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">onera</h3>
+                                <p class="slide__caption__info">Logo aerospatiale</p>
+                            </div>
+
+                            <div class="slide__caption__icon-container">
+                                <label class="slide__caption__label" for="all-slider-img-7">
+										<i class="slide__caption__icon fa fa-eye" aria-hidden="true"></i>
+									</label>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- Image 8 -->
+                    <figure class="slide slide--all">
+                        <input class="control__input" type="checkbox" id="all-slider-img-8" />
+
+                        <!--Lightbox Module-->
+                        <div class="lightbox">
+                            <div class="lightbox__image-container">
+                                <img class="lightbox__image" src="webagency_images/images/portfolio/08.jpg" alt="maquette d'outils de bureau avec le logo d'une marque inscrit dessus" />
+                                <label class="lightbox__label" for="all-slider-img-8">
+										<i class="lightbox__icon fa fa-3x fa-times" aria-hidden="true"></i>
+									</label>
+                            </div>
+                        </div>
+
+                        <img class="slide__image" src="webagency_images/images/portfolio/08.jpg" alt="maquette d'outils de bureau avec le logo d'une marque inscrit dessus" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">cultura</h3>
+                                <p class="slide__caption__info">Enseigne de papeterie</p>
+                            </div>
+
+                            <div class="slide__caption__icon-container">
+                                <label class="slide__caption__label" for="all-slider-img-8">
+										<i class="slide__caption__icon fa fa-eye" aria-hidden="true"></i>
+									</label>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+                <div class="slider__control">
+                    <label class="slider__control__label" for="all-slide-1"></label>
+                    <label class="slider__control__label" for="all-slide-2"></label>
+                    <label class="slider__control__label" for="all-slide-3"></label>
+                    <label class="slider__control__label" for="all-slide-4"></label>
+                    <label class="slider__control__label" for="all-slide-5"></label>
+                    <label class="slider__control__label" for="all-slide-6"></label>
+                    <label class="slider__control__label" for="all-slide-7"></label>
+                    <label class="slider__control__label" for="all-slide-8"></label>
+                </div>
+
+            </div>
+
+            <!-- creation slider -->
+            <div class="slider slider--creations">
+
+                <!--Border for fix the bad rounding percentage of the images while resizing viewport width-->
+                <div class="slider__border"></div>
+
+                <input class="control__input" type="radio" name="creation-slider-control" id="creation-slide-1" checked />
+                <input class="control__input" type="radio" name="creation-slider-control" id="creation-slide-2" />
+                <input class="control__input" type="radio" name="creation-slider-control" id="creation-slide-3" />
+
+                <div class="slider__inner slider__inner--creations">
+
+                    <!-- creation image 1 -->
+                    <figure class="slide slide--creations">
+                        <img class="slide__image" src="webagency_images/images/portfolio/01.jpg" alt="Dessin abtrait d'un visage avec des lunettes sur fond orange" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">philolog.fr</h3>
+                                <p class="slide__caption__info">Blog philosophique</p>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- creation image 2 -->
+                    <figure class="slide slide--creations">
+                        <img class="slide__image" src="webagency_images/images/portfolio/02.jpg" alt="Dessin abtrait d'un lapin rose avec des lunettes tenant une bougie sur fond bleu" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">lecanardenchaine.fr</h3>
+                                <p class="slide__caption__info">Illustration Presse</p>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- creation image 3 -->
+                    <figure class="slide slide--creations">
+                        <img class="slide__image" src="webagency_images/images/portfolio/06.jpg" alt="dessin abstrait d'une ville sur fond orange" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">lemonde.fr</h3>
+                                <p class="slide__caption__info">Presse</p>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+                <div class="slider__control">
+                    <label class="slider__control__label" for="creation-slide-1"></label>
+                    <label class="slider__control__label" for="creation-slide-2"></label>
+                    <label class="slider__control__label" for="creation-slide-3"></label>
+                </div>
+            </div>
+
+
+            <!-- mockup slider -->
+            <div class="slider slider--mockup">
+
+                <!--Border for fix the bad rounding percentage of the images while resizing viewport width-->
+                <div class="slider__border"></div>
+
+                <input class="control__input" type="radio" name="mockup-slider-control" id="mockup-slide-1" checked />
+                <input class="control__input" type="radio" name="mockup-slider-control" id="mockup-slide-2" />
+                <input class="control__input" type="radio" name="mockup-slider-control" id="mockup-slide-3" />
+
+                <div class="slider__inner slider__inner--mockup">
+
+                    <!-- mockup image 1 -->
+                    <figure class="slide slide--mockup">
+                        <img class="slide__image" src="webagency_images/images/portfolio/04.jpg" alt="maquette d'un livre vu du dessus avec des inscriptions sur la couverture" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">nathan.fr</h3>
+                                <p class="slide__caption__info">Prochain livre</p>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- mockup image 2 -->
+                    <figure class="slide slide--mockup">
+                        <img class="slide__image" src="webagency_images/images/portfolio/05.jpg" alt="maquette de sac en papier avec le logo d'une marque inscrit dessus" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">ptitmarche.com</h3>
+                                <p class="slide__caption__info">Enseigne de vente</p>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- mockup image 3 -->
+                    <figure class="slide slide--mockup">
+                        <img class="slide__image" src="webagency_images/images/portfolio/08.jpg" alt="maquette d'outils de bureau avec le logo d'une marque inscrit dessus" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">cultura.com</h3>
+                                <p class="slide__caption__info">Enseigne de papeterie </p>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+                <div class="slider__control">
+                    <label class="slider__control__label" for="mockup-slide-1"></label>
+                    <label class="slider__control__label" for="mockup-slide-2"></label>
+                    <label class="slider__control__label" for="mockup-slide-3"></label>
+                </div>
+
+            </div>
+
+
+            <!-- logo slider -->
+            <div class="slider slider--logo">
+
+                <!--Border for fix the bad rounding percentage of the images while resizing viewport width-->
+                <div class="slider__border"></div>
+
+                <input class="control__input" type="radio" name="logo-slider-control" id="logo-slide-1" checked />
+                <input class="control__input" type="radio" name="logo-slider-control" id="logo-slide-2" />
+
+                <div class="slider__inner slider__inner--logo">
+
+                    <!-- logo image 1 -->
+                    <figure class="slide slide--logo">
+                        <img class="slide__image" src="webagency_images/images/portfolio/03.jpg" alt="Logo caligraphique d'une marque sur fond rouge" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">pompadour.com</h3>
+                                <p class="slide__caption__info">Logo marque de chaussure</p>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                    <!-- logo image 2 -->
+                    <figure class="slide slide--logo">
+                        <img class="slide__image" src="webagency_images/images/portfolio/07.jpg" alt="logo d'une marque ressemblant à une fusé en train de décoller" />
+                        <figcaption class="slide__caption">
+
+                            <div class="slide__caption__info-container">
+                                <h3 class="slide__caption__title">onera.fr</h3>
+                                <p class="slide__caption__info">Logo aerospatiale</p>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+                <div class="slider__control">
+                    <label class="slider__control__label" for="logo-slide-1"></label>
+                    <label class="slider__control__label" for="logo-slide-2"></label>
+                    <label class="slider__control__label" for="logo-slide-1"></label>
+                    <label class="slider__control__label" for="logo-slide-2"></label>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Nous rentrons dans la dernière section que je rentre en footer même si cela n'en est pas réellement un. Aux sein de cette section nous retrouvons une carte avec le point rouge et l'adresse de l'agence ainsi qu'un formulaire de contact avec un numéro de téléphone et l'adresse  postale de l'entreprise. -->
+    <section id="contact">
+        <div>
+            <!-- Nous trouvons ci-dessous un div qui contient l'image de la carte avec le point rouge. Cela apparaît en second plan du formulaire. -->
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2216096860525!2d2.3476315517951103!3d48.87305177918726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1529151964430" width="600" height="450" style="border:0" allowfullscreen id="form"></iframe>
+            </div>
+            <!-- Nous ouvrons cette fois-çi le formulaire de contact avec une méthode post, l'action n'est pas défini car la partie d'envoi (php) n'est pas intégré et une classe pour le style. -->
+            <form method="post" action="x" class="formulaire">
+                <!--Voici la partie qui contient le titre contact et ainsi qu'une adresse et un numéro de téléphone. -->
+                <h2 class="Contact contact">CONTACT INFO</h2>
+                <p class="contact"><span>WebAgency</span><br>25 rue d'Hauteville, 75010 PARIS<br>Tél : 01 02 03 04 05</p>
+                <!-- Nous voici sur le premier champ qui est de type text et requiert un pseudo. -->
+                <input type="text" name="pseudo" class="saisie" placeholder="Ex : Pseudo"><br><br>
+                <!-- Le second champ correspond au mail et est de type email avec un placeholder. -->
+                <input type="email" name="mail" class="saisie" placeholder="Ex : yoyo@gmail.com"><br><br>
+                <!-- Le troisième champ est de type texte et représente l'objet du message. -->
+                <input type="text" name="object" class="saisie" placeholder="Ex : Object"><br><br>
+                <!-- Le dernier champ correspond aux messages envoyés, il est de type textarea. -->
+                <textarea name="ameliorer" class="saisie" id="textarea" placeholder="Ex : Votre message"></textarea><br><br>
+                <!-- Nous retrouvons enfin le bouton pour envoyer notre message, celui-çi est de type submite et possède un id et non la même classe que les champs de dessus. -->
+                <a href="https://www.google.fr/" id="envoyer">ENVOYER</a>
+            </form>
+        </div>
+    </section>
+    <!-- Nous ouvrons à cette endroit la dernière partie de la page qui contient le footer avec en général le copyright les infos de contact par exemple mais la sont juste au-dessus. -->
+    <footer>
+        <br>
+        <!-- Voici la div qui contient le texte du footer. -->
+        <div class="copy">
+            <!-- Voici le premier paragraphe du footer. -->
+            <p id="footerPara">Ce site n'a aucun but commercial. Il a éte réalisé dans un cadre pédagogique. </p>
+            <!-- Voici le second paragraphe du footer. -->
+            <p id="footerCopy">Yoann DELALOY | 2018</p>
+
+
+        </div>
+        <br>
+    </footer>
+</body>
+
+</html>
